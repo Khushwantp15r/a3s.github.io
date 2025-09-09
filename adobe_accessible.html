@@ -1,0 +1,3928 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Accessible Document - Transformed
+  </title>
+  <style>
+   /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            background: #f8fafc;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        /* Skip link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 1000;
+            font-weight: 600;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .accessibility-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        /* Main content */
+        main {
+            padding: 2rem;
+            background: white;
+            min-height: 60vh;
+        }
+        
+        /* Sections */
+        section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        section:last-child {
+            border-bottom: none;
+        }
+        
+        /* Headings */
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            line-height: 1.3;
+            color: #2d3748;
+        }
+        
+        h1 { font-size: 2.5rem; }
+        h2 { font-size: 2rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+        h3 { font-size: 1.75rem; }
+        h4 { font-size: 1.5rem; }
+        h5 { font-size: 1.25rem; }
+        h6 { font-size: 1.125rem; }
+        
+        /* Paragraphs */
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+            line-height: 1.7;
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+        
+        /* Links */
+        a {
+            color: #4299e1;
+            text-decoration: underline;
+        }
+        
+        a:hover, a:focus {
+            color: #3182ce;
+            text-decoration: none;
+            outline: 2px solid #4299e1;
+            outline-offset: 2px;
+        }
+        
+        /* Strong text */
+        strong {
+            font-weight: 600;
+            color: #1a202c;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        th {
+            background: #f7fafc;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            main {
+                padding: 1rem;
+            }
+            
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.75rem; }
+            h3 { font-size: 1.5rem; }
+            h4 { font-size: 1.25rem; }
+            h5 { font-size: 1.125rem; }
+            h6 { font-size: 1rem; }
+        }
+        
+        /* High contrast mode */
+        @media (prefers-contrast: high) {
+            body {
+                background: white;
+                color: black;
+            }
+            
+            header {
+                background: black;
+                color: white;
+            }
+        }
+        
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            
+            * {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+        
+        /* Focus indicators */
+        *:focus {
+            outline: 2px solid #4299e1;
+            outline-offset: 2px;
+        }
+  </style>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Skip to main content
+  </a>
+  <header role="banner">
+   <div class="header-content">
+    <h1>
+     Transformed Accessible Document
+    </h1>
+    <div class="accessibility-badge">
+     ♿ WCAG 2.1 AA Compliant
+    </div>
+   </div>
+  </header>
+  <main id="main-content" role="main">
+   <section>
+    <h3 id="-agenda">
+     ‌AGENDA
+    </h3>
+   </section>
+   <section>
+    <h3 id="fortheboardoftrustees">
+     FORTHEBOARDOFTRUSTEES
+    </h3>
+   </section>
+   <section>
+    <h3 id="ofthetownofbuenavista-colorado">
+     OFTHETOWNOFBUENAVISTA,COLORADO
+    </h3>
+   </section>
+   <section>
+    <h4 id="august26-2025">
+     August26,2025
+    </h4>
+   </section>
+   <section>
+    <h4 id="regularmeetingat7-00pm">
+     RegularMeetingat7:00PM
+    </h4>
+   </section>
+   <section>
+    <h5 id="theboardoftrusteesmeetingsareheldatthecommunitycen">
+     TheBoardofTrusteesmeetingsareheldattheCommunityCenterandareopentothepublic.
+    </h5>
+   </section>
+   <section>
+    <h5 id="staffandthepublicareencouragedtoattendthemeetingvi">
+     StaffandthePublicareencouragedtoattendthemeetingvirtually.
+    </h5>
+   </section>
+   <section>
+    <h4 id="715e-mainstreet-buenavista-colorado">
+     715E.MainStreet,BuenaVista,Colorado
+    </h4>
+    <p>
+     <strong>
+      ToattendthemeetingvirtuallyortoparticipateinPublicCommentand/orPublicHearings,youmustconnecttothevideoconference.
+     </strong>
+    </p>
+    <p>
+     <strong>
+      ConferencingAccessInformation:https://us02web.zoom.us/j/81138570285Password:070320Listenviaphoneat1-719-359-4580MeetingID:81138570285Password:070320
+     </strong>
+    </p>
+    <p>
+     https://us02web.zoom.us/j/81138570285
+    </p>
+    <p>
+     Meeting
+    </p>
+    <p>
+     ID:
+    </p>
+    <p>
+     811
+    </p>
+    <p>
+     3857
+    </p>
+    <p>
+     0285
+    </p>
+   </section>
+   <section>
+    <h5 id="theboardoftrusteesmaytakeactiononanyofthefollowing">
+     THEBOARDOFTRUSTEESMAYTAKEACTIONONANYOFTHEFOLLOWINGAGENDAITEMSASPRESENTEDORMODIFIEDPRIORTOORDURINGTHEMEETING,ANDITEMSNECESSARYTOEFFECTUATETHEAGENDAITEMS
+    </h5>
+   </section>
+   <section>
+    <h4 id="calltoorder">
+     CALLTOORDER
+    </h4>
+   </section>
+   <section>
+    <h4 id="calltoorder">
+     CALLTOORDER
+    </h4>
+   </section>
+   <section>
+    <h4 id="rollcall">
+     ROLLCALL
+    </h4>
+   </section>
+   <section>
+    <h4 id="rollcall">
+     ROLLCALL
+    </h4>
+   </section>
+   <section>
+    <h4 id="pledgeofallegiance">
+     PLEDGEOFALLEGIANCE
+    </h4>
+   </section>
+   <section>
+    <h4 id="pledgeofallegiance">
+     PLEDGEOFALLEGIANCE
+    </h4>
+    <ol>
+     <li>
+      AGENDAADOPTIONTheBoardapprovestheagendaatthestartofthemeeting,includingmodifications.
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h4 id="agendaadoption">
+     AGENDAADOPTION
+    </h4>
+    <p>
+     TheBoardapprovestheagendaatthestartofthemeeting,includingmodifications.
+    </p>
+    <ol>
+     <li>
+      CONSENTAGENDAApprovalofmattersthatareroutineinnaturethatrequirereviewand/orapproval,i.e.minutesandreports.(ProfessionalServiceAgreements(PSA)thatexceed$25,000.00requiretheConsentAgendatobeapprovedbyaRollCallvote)MinutesBoardofTrusteesRegularMeeting–July22,2025BoardofTrusteesRegularMeeting–August12,2025TreeAdvisoryBoardMeeting–July3,2025BeautificationAdvisoryBoardMeeting–July17,2025TownAdministratorTownTreasurerAirportManagerRecreationDirectorPoliceChiefReportPublicWorksDirectorTownClerkPlanningDirectorReportAdoptionofResolutionNo.60,Series2025,entitled,“ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,APPROVINGARESTATEDINTERGOVERNMENTALAGREEMENTBETWEENTHETOWNOFBUENAVISTAANDTHEBUENAVISTASCHOOLDISTRICTNUMBERR-31FORALAWENFORCEMENTSCHOOLPARTNERSHIPPROGRAM(LESP)ANDRESCINDINGTHEBOARD'SSEPTEMBER26th,2023APPROVALOFAPRIORVERSION.”AdoptionofResolutionNo.61,Series2025,entitled,“ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,APPOINTINGLISAFIELDASANALTERNATEVOTINGMEMBEROFTHEPLANNINGANDZONINGCOMMISSION.”AdoptionofResolutionNo.62,Series2025,entitled,“ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,APPOINTINGJOHNDUGGANASAREGULARVOTINGMEMBEROFTHEWATERADVISORYBOARD.”
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h4 id="consentagenda">
+     CONSENTAGENDA
+    </h4>
+    <p>
+     Approvalofmattersthatareroutineinnaturethatrequirereviewand/orapproval,i.e.minutesandreports.(ProfessionalServiceAgreements(PSA)thatexceed$25,000.00requiretheConsentAgendatobeapprovedbyaRollCallvote)
+    </p>
+    <ol>
+     <li>
+      MinutesBoardofTrusteesRegularMeeting–July22,2025BoardofTrusteesRegularMeeting–August12,2025TreeAdvisoryBoardMeeting–July3,2025BeautificationAdvisoryBoardMeeting–July17,2025
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h5 id="minutes">
+     Minutes
+    </h5>
+    <ol>
+     <li>
+      BoardofTrusteesRegularMeeting–July22,2025
+     </li>
+    </ol>
+    <p>
+     BoardofTrusteesRegularMeeting–July22,2025
+    </p>
+    <ol>
+     <li>
+      BoardofTrusteesRegularMeeting–August12,2025
+     </li>
+    </ol>
+    <p>
+     BoardofTrusteesRegularMeeting–August12,2025
+    </p>
+    <ol>
+     <li>
+      TreeAdvisoryBoardMeeting–July3,2025
+     </li>
+    </ol>
+    <p>
+     TreeAdvisoryBoardMeeting–July3,2025
+    </p>
+    <ol>
+     <li>
+      BeautificationAdvisoryBoardMeeting–July17,2025
+     </li>
+    </ol>
+    <p>
+     BeautificationAdvisoryBoardMeeting–July17,2025
+    </p>
+   </section>
+   <section>
+    <h5 id="townadministrator">
+     TownAdministrator
+    </h5>
+   </section>
+   <section>
+    <h5 id="townadministrator">
+     TownAdministrator
+    </h5>
+   </section>
+   <section>
+    <h5 id="towntreasurer">
+     TownTreasurer
+    </h5>
+   </section>
+   <section>
+    <h5 id="towntreasurer">
+     TownTreasurer
+    </h5>
+   </section>
+   <section>
+    <h5 id="airportmanager">
+     AirportManager
+    </h5>
+   </section>
+   <section>
+    <h5 id="airportmanager">
+     AirportManager
+    </h5>
+   </section>
+   <section>
+    <h5 id="recreationdirector">
+     RecreationDirector
+    </h5>
+   </section>
+   <section>
+    <h5 id="recreationdirector">
+     RecreationDirector
+    </h5>
+   </section>
+   <section>
+    <h5 id="policechiefreport">
+     PoliceChiefReport
+    </h5>
+   </section>
+   <section>
+    <h5 id="policechiefreport">
+     PoliceChiefReport
+    </h5>
+   </section>
+   <section>
+    <h5 id="publicworksdirector">
+     PublicWorksDirector
+    </h5>
+   </section>
+   <section>
+    <h5 id="publicworksdirector">
+     PublicWorksDirector
+    </h5>
+   </section>
+   <section>
+    <h5 id="townclerk">
+     TownClerk
+    </h5>
+   </section>
+   <section>
+    <h5 id="townclerk">
+     TownClerk
+    </h5>
+   </section>
+   <section>
+    <h5 id="planningdirectorreport">
+     PlanningDirectorReport
+    </h5>
+   </section>
+   <section>
+    <h5 id="planningdirectorreport">
+     PlanningDirectorReport
+    </h5>
+    <ol>
+     <li>
+      AdoptionofResolutionNo.60,Series2025,entitled,“ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,APPROVINGARESTATEDINTERGOVERNMENTALAGREEMENTBETWEENTHETOWNOFBUENAVISTAANDTHEBUENAVISTASCHOOLDISTRICTNUMBERR-31FORALAWENFORCEMENTSCHOOLPARTNERSHIPPROGRAM(LESP)ANDRESCINDINGTHEBOARD'SSEPTEMBER26th,2023APPROVALOFAPRIORVERSION.”
+     </li>
+    </ol>
+    <p>
+     AdoptionofResolutionNo.60,Series2025,entitled,“ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,APPROVINGARESTATEDINTERGOVERNMENTALAGREEMENTBETWEENTHETOWNOFBUENAVISTAANDTHEBUENAVISTASCHOOLDISTRICTNUMBERR-31FORALAWENFORCEMENTSCHOOLPARTNERSHIPPROGRAM(LESP)ANDRESCINDINGTHEBOARD'SSEPTEMBER26th,2023APPROVALOFAPRIORVERSION.”
+    </p>
+    <p>
+     Adoption
+    </p>
+    <p>
+     of
+    </p>
+    <p>
+     Resolution
+    </p>
+    <p>
+     No.
+    </p>
+    <p>
+     60,
+    </p>
+    <p>
+     Series
+    </p>
+    <p>
+     2025,
+    </p>
+    <p>
+     entitled,
+    </p>
+   </section>
+   <section>
+    <h4 id="-a">
+     “A
+    </h4>
+   </section>
+   <section>
+    <h4 id="resolution">
+     RESOLUTION
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="board">
+     BOARD
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="trustees">
+     TRUSTEES
+    </h4>
+   </section>
+   <section>
+    <h4 id="for">
+     FOR
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="town">
+     TOWN
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="buena">
+     BUENA
+    </h4>
+   </section>
+   <section>
+    <h4 id="vista-">
+     VISTA,
+    </h4>
+   </section>
+   <section>
+    <h4 id="colorado-">
+     COLORADO,
+    </h4>
+   </section>
+   <section>
+    <h4 id="approving">
+     APPROVING
+    </h4>
+   </section>
+   <section>
+    <h4 id="a">
+     A
+    </h4>
+   </section>
+   <section>
+    <h4 id="restated">
+     RESTATED
+    </h4>
+   </section>
+   <section>
+    <h4 id="intergovernmental">
+     INTERGOVERNMENTAL
+    </h4>
+   </section>
+   <section>
+    <h4 id="agreement">
+     AGREEMENT
+    </h4>
+   </section>
+   <section>
+    <h4 id="between">
+     BETWEEN
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="town">
+     TOWN
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="buena">
+     BUENA
+    </h4>
+   </section>
+   <section>
+    <h4 id="vista">
+     VISTA
+    </h4>
+   </section>
+   <section>
+    <h4 id="and">
+     AND
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="buena">
+     BUENA
+    </h4>
+   </section>
+   <section>
+    <h4 id="vista">
+     VISTA
+    </h4>
+   </section>
+   <section>
+    <h4 id="school">
+     SCHOOL
+    </h4>
+   </section>
+   <section>
+    <h4 id="district">
+     DISTRICT
+    </h4>
+   </section>
+   <section>
+    <h4 id="number">
+     NUMBER
+    </h4>
+   </section>
+   <section>
+    <h4 id="r-31">
+     R-31
+    </h4>
+   </section>
+   <section>
+    <h4 id="for">
+     FOR
+    </h4>
+   </section>
+   <section>
+    <h4 id="a">
+     A
+    </h4>
+   </section>
+   <section>
+    <h4 id="law">
+     LAW
+    </h4>
+   </section>
+   <section>
+    <h4 id="enforcement">
+     ENFORCEMENT
+    </h4>
+   </section>
+   <section>
+    <h4 id="school">
+     SCHOOL
+    </h4>
+   </section>
+   <section>
+    <h4 id="partnership">
+     PARTNERSHIP
+    </h4>
+   </section>
+   <section>
+    <h4 id="program">
+     PROGRAM
+    </h4>
+   </section>
+   <section>
+    <h4 id="-lesp-">
+     (LESP)
+    </h4>
+   </section>
+   <section>
+    <h4 id="and">
+     AND
+    </h4>
+   </section>
+   <section>
+    <h4 id="rescinding">
+     RESCINDING
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="board-s">
+     BOARD'S
+    </h4>
+   </section>
+   <section>
+    <h4 id="september">
+     SEPTEMBER
+    </h4>
+   </section>
+   <section>
+    <h5 id="26">
+     26
+    </h5>
+   </section>
+   <section>
+    <h5 id="th">
+     th
+    </h5>
+   </section>
+   <section>
+    <h5 id="-">
+     ,
+    </h5>
+   </section>
+   <section>
+    <h5 id="2023">
+     2023
+    </h5>
+   </section>
+   <section>
+    <h4 id="approval">
+     APPROVAL
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="a">
+     A
+    </h4>
+   </section>
+   <section>
+    <h4 id="prior">
+     PRIOR
+    </h4>
+   </section>
+   <section>
+    <h4 id="version-">
+     VERSION.”
+    </h4>
+    <ol>
+     <li>
+      AdoptionofResolutionNo.61,Series2025,entitled,“ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,APPOINTINGLISAFIELDASANALTERNATEVOTINGMEMBEROFTHEPLANNINGANDZONINGCOMMISSION.”
+     </li>
+    </ol>
+    <p>
+     AdoptionofResolutionNo.61,Series2025,entitled,“ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,APPOINTINGLISAFIELDASANALTERNATEVOTINGMEMBEROFTHEPLANNINGANDZONINGCOMMISSION.”
+    </p>
+    <p>
+     Adoption
+    </p>
+    <p>
+     of
+    </p>
+    <p>
+     Resolution
+    </p>
+    <p>
+     No.
+    </p>
+    <p>
+     61,
+    </p>
+    <p>
+     Series
+    </p>
+    <p>
+     2025,
+    </p>
+    <p>
+     entitled,
+    </p>
+   </section>
+   <section>
+    <h4 id="-a">
+     “A
+    </h4>
+   </section>
+   <section>
+    <h4 id="resolution">
+     RESOLUTION
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="board">
+     BOARD
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="trustees">
+     TRUSTEES
+    </h4>
+   </section>
+   <section>
+    <h4 id="for">
+     FOR
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="town">
+     TOWN
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="buena">
+     BUENA
+    </h4>
+   </section>
+   <section>
+    <h4 id="vista-">
+     VISTA,
+    </h4>
+   </section>
+   <section>
+    <h4 id="colorado-">
+     COLORADO,
+    </h4>
+   </section>
+   <section>
+    <h4 id="appointing">
+     APPOINTING
+    </h4>
+   </section>
+   <section>
+    <h4 id="lisa">
+     LISA
+    </h4>
+   </section>
+   <section>
+    <h4 id="field">
+     FIELD
+    </h4>
+   </section>
+   <section>
+    <h4 id="as">
+     AS
+    </h4>
+   </section>
+   <section>
+    <h4 id="an">
+     AN
+    </h4>
+   </section>
+   <section>
+    <h4 id="alternate">
+     ALTERNATE
+    </h4>
+   </section>
+   <section>
+    <h4 id="voting">
+     VOTING
+    </h4>
+   </section>
+   <section>
+    <h4 id="member">
+     MEMBER
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="planning">
+     PLANNING
+    </h4>
+   </section>
+   <section>
+    <h4 id="and">
+     AND
+    </h4>
+   </section>
+   <section>
+    <h4 id="zoning">
+     ZONING
+    </h4>
+   </section>
+   <section>
+    <h4 id="commission-">
+     COMMISSION.”
+    </h4>
+    <ol>
+     <li>
+      AdoptionofResolutionNo.62,Series2025,entitled,“ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,APPOINTINGJOHNDUGGANASAREGULARVOTINGMEMBEROFTHEWATERADVISORYBOARD.”
+     </li>
+    </ol>
+    <p>
+     AdoptionofResolutionNo.62,Series2025,entitled,“ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,APPOINTINGJOHNDUGGANASAREGULARVOTINGMEMBEROFTHEWATERADVISORYBOARD.”
+    </p>
+    <p>
+     Adoption
+    </p>
+    <p>
+     of
+    </p>
+    <p>
+     Resolution
+    </p>
+    <p>
+     No.
+    </p>
+    <p>
+     62,
+    </p>
+    <p>
+     Series
+    </p>
+    <p>
+     2025,
+    </p>
+    <p>
+     entitled,
+    </p>
+   </section>
+   <section>
+    <h4 id="-a">
+     “A
+    </h4>
+   </section>
+   <section>
+    <h4 id="resolution">
+     RESOLUTION
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="board">
+     BOARD
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="trustees">
+     TRUSTEES
+    </h4>
+   </section>
+   <section>
+    <h4 id="for">
+     FOR
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="town">
+     TOWN
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="buena">
+     BUENA
+    </h4>
+   </section>
+   <section>
+    <h4 id="vista-">
+     VISTA,
+    </h4>
+   </section>
+   <section>
+    <h4 id="colorado-">
+     COLORADO,
+    </h4>
+   </section>
+   <section>
+    <h4 id="appointing">
+     APPOINTING
+    </h4>
+   </section>
+   <section>
+    <h4 id="john">
+     JOHN
+    </h4>
+   </section>
+   <section>
+    <h4 id="duggan">
+     DUGGAN
+    </h4>
+   </section>
+   <section>
+    <h4 id="as">
+     AS
+    </h4>
+   </section>
+   <section>
+    <h4 id="a">
+     A
+    </h4>
+   </section>
+   <section>
+    <h4 id="regular">
+     REGULAR
+    </h4>
+   </section>
+   <section>
+    <h4 id="voting">
+     VOTING
+    </h4>
+   </section>
+   <section>
+    <h4 id="member">
+     MEMBER
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="water">
+     WATER
+    </h4>
+   </section>
+   <section>
+    <h4 id="advisory">
+     ADVISORY
+    </h4>
+   </section>
+   <section>
+    <h4 id="board-">
+     BOARD.”
+    </h4>
+    <ol>
+     <li>
+      PUBLICCOMMENTCitizenparticipationwherethepubliccansignuppriortothestartofthemeetingtospeakduringpubliccomment.ThreeminutesformattersnotontheagendaorforagendaitemsnotscheduledforPublicHearing.Enteryourname,address,andsubjecttobediscussedintheZoomChatbox,orwhenMayorFayasksforPublicComment,clicktheraisehandbuttoninthewebinarcontrolpanel,orbyphonepress*9,andthemeetinghostwillpromptyoutounmutewhenitisyourturntospeak.Oryoumayemailtheinformationtobvclerk@buenavistaco.gov.NeitherTownBoardnorTownstaffshouldbeexpectedtorespondtomattersraisedinthePublicCommentsegmentofBoardmeetings.Nevertheless,Boardmemberswillalwaysretaintherighttoaskquestionsofthespeakerandrespondthenorlatertoremarksmadebyanycitizen.CommentsmadeintheZoomChatboxwillnotbediscussedorincludedintheminutes.
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h4 id="publiccomment">
+     PUBLICCOMMENT
+    </h4>
+    <p>
+     Citizenparticipationwherethepubliccansignuppriortothestartofthemeetingtospeakduringpubliccomment.ThreeminutesformattersnotontheagendaorforagendaitemsnotscheduledforPublicHearing.Enteryourname,address,andsubjecttobediscussedintheZoomChatbox,orwhenMayorFayasksforPublicComment,clicktheraisehandbuttoninthewebinarcontrolpanel,orbyphonepress*9,andthemeetinghostwillpromptyoutounmutewhenitisyourturntospeak.Oryoumayemailtheinformationtobvclerk@buenavistaco.gov.NeitherTownBoardnorTownstaffshouldbeexpectedtorespondtomattersraisedinthePublicCommentsegmentofBoardmeetings.Nevertheless,Boardmemberswillalwaysretaintherighttoaskquestionsofthespeakerandrespondthenorlatertoremarksmadebyanycitizen.CommentsmadeintheZoomChatboxwillnotbediscussedorincludedintheminutes.
+    </p>
+    <ol>
+     <li>
+      BUSINESSITEMSTownofBuenaVistaComprehensivePlan(TrusteePacketPage#111)ShouldtheBoardofTrusteesapprovetheadoptionofResolutionNo.63,Series2025,entitled,“ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,ADOPTINGANUPDATEDCOMPREHENSIVEPLAN.”TheBoardwillconsideradoptingtheTownofBuenaVistaComprehensivePlandatedAugust26,2025.(Estimatedtime–30minutes)Short-TermRentals(TrusteePacketPage#484 ForTheFirstItemandPage#500 ForTheSecondItem)ShouldtheBoardofTrusteesapprovetheadoptionofOrdinanceNo.09,Series2025,entitled,"ANORDINANCEOFTHEBOARDOFTRUSTEESOFTHETOWNOFBUENAVISTAAMENDINGSECTIONSOFCHAPTER6OFTHEBUENAVISTAMUNICIPALCODECONCERNINGSHORT-TERMRENTALLICENSES.”TheBoardwillconsiderapprovingamendmentstosectionsofChapter6oftheMunicipalCodeconcerningshort-termrentallicenses,includingthedefinitionoftotalhousingstock,changing%capstonumeric,andpotentialfurtherrestrictions.DirectionforStaffonAdditionalShort-TermRelatedCodeAmendmentsStaffisrequestingtheBoardtoprovidedirectiononadditionalshort-termrelatedcodeamendments,includingdifferentiationsbetweenhotels/motelsandthenumberofallowableSTRsinSMandMU-MS.(Estimatedtime–30minutes)TownofBuenaVista2026BudgetIntroduction(TrusteePacketPage#504)TownTreasurerPhillipPuckettwillprovidetheBoardwithanoverviewofthe2026Budgetprocesses.(Estimatedtime–15minutes)HealingCenters(TrusteePacketPage#517)ShouldtheBoardofTrusteesapprovetheadoptionofOrdinanceNo.10,Series2025,entitled,“ANEMERGENCYORDINANCEIMPOSINGATEMPORARYMORATORIUMONTHEACCEPTANCE,PROCESSINGANDAPPROVALOFAPPLICATIONSFORTHEESTABLISHMENTOFANATURALMEDICINEBUSINESSANDTHEESTABLISHMENTOFANATURALMEDICINEBUSINESSONANYPROPERTYWITHINTHETOWN.”Thisistoprovidestafftimetocreatecodethatalignswiththestatutoryrequirementsfornaturalmedicinebusinesses.(Estimatedtime–5minutes)
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h4 id="businessitems">
+     BUSINESSITEMS
+    </h4>
+    <ol>
+     <li>
+      TownofBuenaVistaComprehensivePlan(TrusteePacketPage#111)ShouldtheBoardofTrusteesapprovetheadoptionofResolutionNo.63,Series2025,entitled,“ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,ADOPTINGANUPDATEDCOMPREHENSIVEPLAN.”TheBoardwillconsideradoptingtheTownofBuenaVistaComprehensivePlandatedAugust26,2025.(Estimatedtime–30minutes)
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h5 id="townofbuenavistacomprehensiveplan-trusteepacketpag">
+     TownofBuenaVistaComprehensivePlan(TrusteePacketPage#111)
+    </h5>
+    <p>
+     ShouldtheBoardofTrusteesapprovetheadoptionofResolutionNo.63,Series2025,entitled,“ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,ADOPTINGANUPDATEDCOMPREHENSIVEPLAN.”
+    </p>
+    <p>
+     Should
+    </p>
+    <p>
+     the
+    </p>
+   </section>
+   <section>
+    <h5 id="board">
+     Board
+    </h5>
+    <p>
+     of
+    </p>
+    <p>
+     Trustees
+    </p>
+    <p>
+     approve
+    </p>
+    <p>
+     the
+    </p>
+    <p>
+     adoption
+    </p>
+    <p>
+     of
+    </p>
+    <p>
+     Resolution
+    </p>
+    <p>
+     No.
+    </p>
+    <p>
+     63,
+    </p>
+    <p>
+     Series
+    </p>
+    <p>
+     2025,
+    </p>
+    <p>
+     entitled,
+    </p>
+   </section>
+   <section>
+    <h4 id="-a">
+     “A
+    </h4>
+   </section>
+   <section>
+    <h4 id="resolution">
+     RESOLUTION
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="board">
+     BOARD
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="trustees">
+     TRUSTEES
+    </h4>
+   </section>
+   <section>
+    <h4 id="for">
+     FOR
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="town">
+     TOWN
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="buena">
+     BUENA
+    </h4>
+   </section>
+   <section>
+    <h4 id="vista-">
+     VISTA,
+    </h4>
+   </section>
+   <section>
+    <h4 id="colorado-">
+     COLORADO,
+    </h4>
+   </section>
+   <section>
+    <h4 id="adopting">
+     ADOPTING
+    </h4>
+   </section>
+   <section>
+    <h4 id="an">
+     AN
+    </h4>
+   </section>
+   <section>
+    <h4 id="updated">
+     UPDATED
+    </h4>
+   </section>
+   <section>
+    <h4 id="comprehensive">
+     COMPREHENSIVE
+    </h4>
+   </section>
+   <section>
+    <h4 id="plan-">
+     PLAN.”
+    </h4>
+    <p>
+     TheBoardwillconsideradoptingtheTownofBuenaVistaComprehensivePlandatedAugust26,2025.(Estimatedtime–30minutes)
+    </p>
+    <ol>
+     <li>
+      Short-TermRentals(TrusteePacketPage#484 ForTheFirstItemandPage#500 ForTheSecondItem)ShouldtheBoardofTrusteesapprovetheadoptionofOrdinanceNo.09,Series2025,entitled,"ANORDINANCEOFTHEBOARDOFTRUSTEESOFTHETOWNOFBUENAVISTAAMENDINGSECTIONSOFCHAPTER6OFTHEBUENAVISTAMUNICIPALCODECONCERNINGSHORT-TERMRENTALLICENSES.”TheBoardwillconsiderapprovingamendmentstosectionsofChapter6oftheMunicipalCodeconcerningshort-termrentallicenses,includingthedefinitionoftotalhousingstock,changing%capstonumeric,andpotentialfurtherrestrictions.DirectionforStaffonAdditionalShort-TermRelatedCodeAmendmentsStaffisrequestingtheBoardtoprovidedirectiononadditionalshort-termrelatedcodeamendments,includingdifferentiationsbetweenhotels/motelsandthenumberofallowableSTRsinSMandMU-MS.(Estimatedtime–30minutes)
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h5 id="short-termrentals-trusteepacketpage-484-forthefirs">
+     Short-TermRentals(TrusteePacketPage#484 ForTheFirstItemandPage#500 ForTheSecondItem)
+    </h5>
+    <ul>
+     <li>
+      ShouldtheBoardofTrusteesapprovetheadoptionofOrdinanceNo.09,Series2025,entitled,"ANORDINANCEOFTHEBOARDOFTRUSTEESOFTHETOWNOFBUENAVISTAAMENDINGSECTIONSOFCHAPTER6OFTHEBUENAVISTAMUNICIPALCODECONCERNINGSHORT-TERMRENTALLICENSES.”TheBoardwillconsiderapprovingamendmentstosectionsofChapter6oftheMunicipalCodeconcerningshort-termrentallicenses,includingthedefinitionoftotalhousingstock,changing%capstonumeric,andpotentialfurtherrestrictions.
+     </li>
+    </ul>
+    <p>
+     ShouldtheBoardofTrusteesapprovetheadoptionofOrdinanceNo.09,Series2025,entitled,"ANORDINANCEOFTHEBOARDOFTRUSTEESOFTHETOWNOFBUENAVISTAAMENDINGSECTIONSOFCHAPTER6OFTHEBUENAVISTAMUNICIPALCODECONCERNINGSHORT-TERMRENTALLICENSES.”
+    </p>
+    <p>
+     Should
+    </p>
+    <p>
+     the
+    </p>
+   </section>
+   <section>
+    <h5 id="board">
+     Board
+    </h5>
+    <p>
+     of
+    </p>
+    <p>
+     Trustees
+    </p>
+    <p>
+     approve
+    </p>
+    <p>
+     the
+    </p>
+    <p>
+     adoption
+    </p>
+    <p>
+     of
+    </p>
+    <p>
+     Ordinance
+    </p>
+    <p>
+     No.
+    </p>
+    <p>
+     09,
+    </p>
+    <p>
+     Series
+    </p>
+    <p>
+     2025,
+    </p>
+    <p>
+     entitled,
+    </p>
+   </section>
+   <section>
+    <h4 id="-an">
+     "AN
+    </h4>
+   </section>
+   <section>
+    <h4 id="ordinance">
+     ORDINANCE
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="board">
+     BOARD
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="trustees">
+     TRUSTEES
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="town">
+     TOWN
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="buena">
+     BUENA
+    </h4>
+   </section>
+   <section>
+    <h4 id="vista">
+     VISTA
+    </h4>
+   </section>
+   <section>
+    <h4 id="amending">
+     AMENDING
+    </h4>
+   </section>
+   <section>
+    <h4 id="sections">
+     SECTIONS
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="chapter">
+     CHAPTER
+    </h4>
+   </section>
+   <section>
+    <h5 id="6">
+     6
+    </h5>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="buena">
+     BUENA
+    </h4>
+   </section>
+   <section>
+    <h4 id="vista">
+     VISTA
+    </h4>
+   </section>
+   <section>
+    <h4 id="municipal">
+     MUNICIPAL
+    </h4>
+   </section>
+   <section>
+    <h4 id="code">
+     CODE
+    </h4>
+   </section>
+   <section>
+    <h4 id="concerning">
+     CONCERNING
+    </h4>
+   </section>
+   <section>
+    <h4 id="short-term">
+     SHORT-TERM
+    </h4>
+   </section>
+   <section>
+    <h4 id="rental">
+     RENTAL
+    </h4>
+   </section>
+   <section>
+    <h4 id="licenses-">
+     LICENSES.”
+    </h4>
+    <p>
+     TheBoardwillconsiderapprovingamendmentstosectionsofChapter6oftheMunicipalCodeconcerningshort-termrentallicenses,includingthedefinitionoftotalhousingstock,changing%capstonumeric,andpotentialfurtherrestrictions.
+    </p>
+   </section>
+   <section>
+    <h5 id="directionforstaffonadditionalshort-termrelatedcode">
+     DirectionforStaffonAdditionalShort-TermRelatedCodeAmendments
+    </h5>
+   </section>
+   <section>
+    <h5 id="directionforstaffonadditionalshort-termrelatedcode">
+     DirectionforStaffonAdditionalShort-TermRelatedCodeAmendments
+    </h5>
+    <p>
+     StaffisrequestingtheBoardtoprovidedirectiononadditionalshort-termrelatedcodeamendments,includingdifferentiationsbetweenhotels/motelsandthenumberofallowableSTRsinSMandMU-MS.
+    </p>
+    <p>
+     (Estimatedtime–30minutes)
+    </p>
+    <ol>
+     <li>
+      TownofBuenaVista2026BudgetIntroduction(TrusteePacketPage#504)TownTreasurerPhillipPuckettwillprovidetheBoardwithanoverviewofthe2026Budgetprocesses.(Estimatedtime–15minutes)
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h5 id="townofbuenavista2026budgetintroduction-trusteepack">
+     TownofBuenaVista2026BudgetIntroduction(TrusteePacketPage#504)
+    </h5>
+    <p>
+     TownTreasurerPhillipPuckettwillprovidetheBoardwithanoverviewofthe2026Budgetprocesses.(Estimatedtime–15minutes)
+    </p>
+    <ol>
+     <li>
+      HealingCenters(TrusteePacketPage#517)ShouldtheBoardofTrusteesapprovetheadoptionofOrdinanceNo.10,Series2025,entitled,“ANEMERGENCYORDINANCEIMPOSINGATEMPORARYMORATORIUMONTHEACCEPTANCE,PROCESSINGANDAPPROVALOFAPPLICATIONSFORTHEESTABLISHMENTOFANATURALMEDICINEBUSINESSANDTHEESTABLISHMENTOFANATURALMEDICINEBUSINESSONANYPROPERTYWITHINTHETOWN.”Thisistoprovidestafftimetocreatecodethatalignswiththestatutoryrequirementsfornaturalmedicinebusinesses.(Estimatedtime–5minutes)
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h5 id="healingcenters-trusteepacketpage-517-">
+     HealingCenters(TrusteePacketPage#517)
+    </h5>
+    <p>
+     ShouldtheBoardofTrusteesapprovetheadoptionofOrdinanceNo.10,Series2025,entitled,
+    </p>
+    <p>
+     <strong>
+      “ANEMERGENCYORDINANCEIMPOSINGATEMPORARYMORATORIUMONTHEACCEPTANCE,PROCESSINGANDAPPROVALOFAPPLICATIONSFORTHEESTABLISHMENTOFANATURALMEDICINEBUSINESSANDTHEESTABLISHMENTOFANATURALMEDICINEBUSINESSONANYPROPERTYWITHINTHETOWN.”
+     </strong>
+    </p>
+    <p>
+     Thisistoprovidestafftimetocreatecodethatalignswiththestatutoryrequirementsfornaturalmedicinebusinesses.(Estimatedtime–5minutes)
+    </p>
+    <p>
+     (Estimated
+    </p>
+    <p>
+     time
+    </p>
+    <p>
+     –
+    </p>
+    <p>
+     5
+    </p>
+    <p>
+     minutes)
+    </p>
+    <ol>
+     <li>
+      TRUSTEE/STAFFINTERACTIONTheBoarddiscussesitemswithstaffandstaffcanbringupmattersnotontheagenda.
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h4 id="trustee-staffinteraction">
+     TRUSTEE/STAFFINTERACTION
+    </h4>
+    <p>
+     TheBoarddiscussesitemswithstaffandstaffcanbringupmattersnotontheagenda.
+    </p>
+    <ol>
+     <li>
+      INFORMATIONONLY/REQUESTSFORLETTERSOFSUPPORT(Trustee Packet Page # 525)LetterofSupport–ColoradoTourismOfficeAppointBoardofTrusteesmemberstojointcommitteeswiththeBoardofEducationfor:WaterColoradoMountainCollege(CMC)facility?
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h5 id="informationonly-requestsforlettersofsupport-truste">
+     INFORMATIONONLY/REQUESTSFORLETTERSOFSUPPORT(Trustee Packet Page # 525)
+    </h5>
+   </section>
+   <section>
+    <h5 id="letterofsupport-coloradotourismoffice">
+     LetterofSupport–ColoradoTourismOffice
+    </h5>
+   </section>
+   <section>
+    <h5 id="letterofsupport-coloradotourismoffice">
+     LetterofSupport–ColoradoTourismOffice
+    </h5>
+    <ol>
+     <li>
+      AppointBoardofTrusteesmemberstojointcommitteeswiththeBoardofEducationfor:WaterColoradoMountainCollege(CMC)facility?
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h5 id="appointboardoftrusteesmemberstojointcommitteeswith">
+     AppointBoardofTrusteesmemberstojointcommitteeswiththeBoardofEducationfor:
+    </h5>
+   </section>
+   <section>
+    <h5 id="water">
+     Water
+    </h5>
+   </section>
+   <section>
+    <h5 id="water">
+     Water
+    </h5>
+   </section>
+   <section>
+    <h5 id="coloradomountaincollege-cmc-facility-">
+     ColoradoMountainCollege(CMC)facility?
+    </h5>
+   </section>
+   <section>
+    <h5 id="coloradomountaincollege-cmc-facility-">
+     ColoradoMountainCollege(CMC)facility?
+    </h5>
+    <ol>
+     <li>
+      EXECUTIVESESSION–ClearCreekReservoirAnexecutivesessiontodeterminepositionsrelativetomattersthatmaybesubjecttonegotiations,developastrategyfornegotiations,and/orinstructnegotiators,pursuanttoC.R.S.§24-6-402(4)(e),concerningthepotentialacquisitionofwaterstorage.
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h5 id="executivesession-clearcreekreservoir">
+     EXECUTIVESESSION–ClearCreekReservoir
+    </h5>
+    <p>
+     Anexecutivesessiontodeterminepositionsrelativetomattersthatmaybesubjecttonegotiations,developastrategyfornegotiations,and/orinstructnegotiators,pursuanttoC.R.S.§24-6-402(4)(e),concerningthepotentialacquisitionofwaterstorage.
+    </p>
+    <ol>
+     <li>
+      ADJOURNMENT‌MINUTESOFTHEBUENAVISTABOARDOFTRUSTEESREGULARMEETINGTuesday,July22,2025MINUTESOFTHEMEETINGSOFTHEBOARDOFTRUSTEESAREATRANSCRIPTOFTHEGOVERNINGBODY'SACTIONSRATHERTHANAVERBATIMRECORDOFDELIBERATIONS.WorkSessionat6:00PM–ShortTermRentals(audiotime0.05)MayorLibbyFay,TrusteesAndrewRice,DevinRowe,CindieSwisher,MaggieHuyck,ChrisSturm,andMichaRosenoerwereinattendancefortheShort-TermRentalTrusteeworksession.AlsopresentwereTownAdministratorBrianBerger,TreasurerPhillipPuckett,SeniorPolicyAdvisor&amp;ProjectAdvocateJoelBenson,PlanningDirectorMarikaKopp,PlanningDirectorShawnWilliams,DeputyTownClerkEdBarkowski,andTownClerkPaulaBarnett.TownAdministratorBrianBergerstatedthattheBoardofTrusteesrequestedaworksessiontoreviewanddiscusstheTown'sShort-TermRental(STR)Policy.Bergersharedthat,pertheTrustee'srequestsattheJuly8,2025,BoardofTrusteesmeeting,theyhavebeenprovidedwiththefollowinginformationintheBoardPacket.HowlongarepeoplewaitingforanSTRlicenseonthewaitinglistHowmanyhouseshavebeenaddedsincecapswereputinplaceHowmanyhousesareanticipatedtobeaddedtothedwellingunitcountInsightsonthecurrenthousingmarketingeneral(JulieKerstingwith8ZRealEstateprovidedthedocumentationincludedinthepacket)ComparisonstounitcountsidentifiedintheHousingNeedsAssessmentInformationoncomparablepoliciesincomparablemunicipalitiesandruralareasAnyincentiveforownerstoswitchfromSTRstolong-termrentalsTownofBuenaVistaMunicipalCodeSectionChapter6ArticleVII–Short-TermRentalPropertieswasalsoincludedintheBoardPacket.MayorFaystatedthatTrusteeRosenoerhadsuggestedtheworksession,andthatshort-termrentalsareimportanttothecommunitybecausetherearenotenoughhotelroomstomeettouristdemand.Additionally,peopleoftencomeinlargergroupsandprefertostayinahouseratherthanseveralmotel/hotelrooms.MayorFaystatedthattheBoardisnottryingtodriveawaySTRsandwantstoensuretheyareresponsibleinperiodicallyreviewingpolicies.TrusteeRosenorcommentedthat,asaBoard,theydonothavemanyleverstopulltoimpactaffordablehousing,andhopesthatlimitingSTRswillbringhousingforlong-termrentalsorforcepricesdown.TrusteeRosenorwouldliketoseethecaponout-of-countyandentityownershipdecreasedfrom6%to3%,andhavehomesinSouthMainandunitsdesignatedasaffordableorworkforcehousingexcludedfromtheresidentialdwellingunitcounts.TrusteeHuyckagreedwithTrusteeRosenorthattheresidentialdwellingunitcountsneedtoberevisedandthathousesthataredeed-restricted,underChaffeeHousingTrust,anddevelopmentsthatrestrictSTRsshouldnotbeincludedinthehousingcounts.TheBoarddiscussedthedeterminationofthecurrentSTRcategorycaps,includinglodgingtaxandoccupationaltax,aswellastheimportanceofmaintainingcommunityinneighborhoods,andtheprosandconsofshort-termrentalsversuslong-termrentals.ThisdiscussionalsoaddressedlimitingthenumberofSTRsinresidentialzonedistrictsandonhomesdesignedforfirst-timehomeowners,aswellascapsbyzonedistrict.TheTrusteesbrieflydiscussedplacingamoratoriumonSTRswhiletheBoardreviewsthepolicyandseeksinputfromthePlanning&amp;ZoningCommission,businessowners,andthecommunity,butwouldevaluatechangingtheSTRpolicyviaordinancetocapturetheproposedamendments.BasedondirectionfromtheBoard,staffwilldraftanordinancefortheBoardtoreviewattheAugust26,2025,meeting.ThisordinancewouldchangethepercentageofSTRsbycategorytoasetnumberoflicensesandexcludedeed-restrictedunitsandhomesinSouthMainwhichdoesnothaveacaponSTRsfromtheresidentialdwellingunitscounts.Anin-person/virtualregularmeetingoftheBoardofTrusteeswascalledtoorderbyMayorLibbyFayat7:05PM,Tuesday,July22,2025,attheBuenaVistaCommunityCenter,PinonRoom,715E.MainStreet,BuenaVista,Colorado,havingbeenpreviouslynoticedinaccordancewiththeColoradoOpenMeetingsLaw.ROLLCALLAttendeeNameTitleStatusLibbyFayMayorPresentMaggieHuyckTrusteePresentAndrewRiceTrusteePresentMichaRosenoerTrusteePresentDevinRoweTrusteePresentChrisSturmTrusteePresentCindieSwisherTrusteePresentTownStaffPresent:TownAdministratorBrianBergerTownAttorneyJeffParkerviaZoomTownTreasurerPhillipPuckettAirportManagerJackWylesAirportOperationsSupervisorChandraSwansonPublicWorksDirectorShawnWilliamsTownClerkPaulaBarnettPlanningDirectorMarikaKoppSeniorPolicyAdvisor&amp;ProjectAdvocateJoelBensonPLEDGEOFALLEGIANCEMayorFayledthePledgeofAllegiance.AGENDAADOPTIONMOTIONNO.01:RESULTSMOVERSECONDER:AYES:CARRIEDTrusteeHuyckTrusteeRosenorHuyck,Rice,Rosenoer,Rowe,Strum,SwisherMOVETOAPPROVETHEAGENDA.CONSENTAGENDAApprovalofmattersthatareroutineinnaturethatrequirereviewand/orapproval,i.e.minutesandreports.(ProfessionalServiceAgreements(PSA)thatexceed$25,000.00requiretheConsentAgendatobeapprovedbyaRollCallvote)MinutesBoardofTrusteesRegularMeeting–July8,2025TreeAdvisoryBoardMeeting–June5,2025RecreationAdvisoryBoardMinutes–May21,2025RecreationAdvisoryBoardMinutes–June18,2025TownAdministratorReportTownTreasurerReportandQuarterlyFinancialStatusandUpdate–2Q2025AirportManagerReportRecreationDirectorReportAdoptionofResolutionNo.57,Series2025,entitled,"ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,APPOINTINGRICHARDLUEBASANALTERNATEMEMBEROFTHEHISTORICPRESERVATIONCOMMITTEE."
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h4 id="adjournment">
+     ADJOURNMENT
+    </h4>
+   </section>
+   <section>
+    <h2 id="-minutesofthebuenavistaboardoftrusteesregularmeeti">
+     ‌MINUTESOFTHEBUENAVISTABOARDOFTRUSTEESREGULARMEETING
+    </h2>
+   </section>
+   <section>
+    <h3 id="tuesday-july22-2025">
+     Tuesday,July22,2025
+    </h3>
+   </section>
+   <section>
+    <h5 id="minutesofthemeetingsoftheboardoftrusteesareatransc">
+     MINUTESOFTHEMEETINGSOFTHEBOARDOFTRUSTEESAREATRANSCRIPTOFTHEGOVERNINGBODY'SACTIONSRATHERTHANAVERBATIMRECORDOFDELIBERATIONS.
+    </h5>
+   </section>
+   <section>
+    <h4 id="worksessionat6-00pm-shorttermrentals-audiotime0-05">
+     WorkSessionat6:00PM–ShortTermRentals(audiotime0.05)
+    </h4>
+    <p>
+     MayorLibbyFay,TrusteesAndrewRice,DevinRowe,CindieSwisher,MaggieHuyck,ChrisSturm,andMichaRosenoerwereinattendancefortheShort-TermRentalTrusteeworksession.AlsopresentwereTownAdministratorBrianBerger,TreasurerPhillipPuckett,SeniorPolicyAdvisor&amp;ProjectAdvocateJoelBenson,PlanningDirectorMarikaKopp,PlanningDirectorShawnWilliams,DeputyTownClerkEdBarkowski,andTownClerkPaulaBarnett.
+    </p>
+    <p>
+     TownAdministratorBrianBergerstatedthattheBoardofTrusteesrequestedaworksessiontoreviewanddiscusstheTown'sShort-TermRental(STR)Policy.Bergersharedthat,pertheTrustee'srequestsattheJuly8,2025,BoardofTrusteesmeeting,theyhavebeenprovidedwiththefollowinginformationintheBoardPacket.
+    </p>
+    <ul>
+     <li>
+      HowlongarepeoplewaitingforanSTRlicenseonthewaitinglist
+     </li>
+    </ul>
+    <p>
+     HowlongarepeoplewaitingforanSTRlicenseonthewaitinglist
+    </p>
+    <ul>
+     <li>
+      Howmanyhouseshavebeenaddedsincecapswereputinplace
+     </li>
+    </ul>
+    <p>
+     Howmanyhouseshavebeenaddedsincecapswereputinplace
+    </p>
+    <ul>
+     <li>
+      Howmanyhousesareanticipatedtobeaddedtothedwellingunitcount
+     </li>
+    </ul>
+    <p>
+     Howmanyhousesareanticipatedtobeaddedtothedwellingunitcount
+    </p>
+    <ul>
+     <li>
+      Insightsonthecurrenthousingmarketingeneral(JulieKerstingwith8ZRealEstateprovidedthedocumentationincludedinthepacket)
+     </li>
+    </ul>
+    <p>
+     Insightsonthecurrenthousingmarketingeneral
+    </p>
+    <p>
+     (JulieKerstingwith8ZRealEstateprovidedthedocumentationincludedinthepacket)
+    </p>
+    <ul>
+     <li>
+      ComparisonstounitcountsidentifiedintheHousingNeedsAssessment
+     </li>
+    </ul>
+    <p>
+     ComparisonstounitcountsidentifiedintheHousingNeedsAssessment
+    </p>
+    <ul>
+     <li>
+      Informationoncomparablepoliciesincomparablemunicipalitiesandruralareas
+     </li>
+    </ul>
+    <p>
+     Informationoncomparablepoliciesincomparablemunicipalitiesandruralareas
+    </p>
+    <ul>
+     <li>
+      AnyincentiveforownerstoswitchfromSTRstolong-termrentals
+     </li>
+    </ul>
+    <p>
+     AnyincentiveforownerstoswitchfromSTRstolong-termrentals
+    </p>
+    <p>
+     TownofBuenaVistaMunicipalCodeSectionChapter6ArticleVII–Short-TermRentalPropertieswasalsoincludedintheBoardPacket.
+    </p>
+    <p>
+     MayorFaystatedthatTrusteeRosenoerhadsuggestedtheworksession,andthatshort-termrentalsareimportanttothecommunitybecausetherearenotenoughhotelroomstomeettouristdemand.Additionally,peopleoftencomeinlargergroupsandprefertostayinahouseratherthanseveralmotel/hotelrooms.MayorFaystatedthattheBoardisnottryingtodriveawaySTRsandwantstoensuretheyareresponsibleinperiodicallyreviewingpolicies.
+    </p>
+    <p>
+     TrusteeRosenorcommentedthat,asaBoard,theydonothavemanyleverstopulltoimpactaffordablehousing,andhopesthatlimitingSTRswillbringhousingforlong-termrentalsorforcepricesdown.TrusteeRosenorwouldliketoseethecaponout-of-countyandentityownershipdecreasedfrom6%to3%,andhavehomesinSouthMainandunitsdesignatedasaffordableorworkforcehousingexcludedfromtheresidentialdwellingunitcounts.TrusteeHuyckagreedwithTrusteeRosenorthattheresidentialdwellingunitcountsneedtoberevisedandthathousesthataredeed-restricted,underChaffeeHousingTrust,anddevelopmentsthatrestrictSTRsshouldnotbeincludedinthehousingcounts.
+    </p>
+    <p>
+     TheBoarddiscussedthedeterminationofthecurrentSTRcategorycaps,includinglodgingtaxandoccupationaltax,aswellastheimportanceofmaintainingcommunityinneighborhoods,andtheprosandconsofshort-termrentalsversuslong-termrentals.ThisdiscussionalsoaddressedlimitingthenumberofSTRsinresidentialzonedistrictsandonhomesdesignedforfirst-timehomeowners,aswellascapsbyzonedistrict.TheTrusteesbrieflydiscussedplacingamoratoriumonSTRswhiletheBoardreviewsthepolicyandseeksinputfromthePlanning&amp;ZoningCommission,businessowners,andthecommunity,butwouldevaluatechangingtheSTRpolicyviaordinancetocapturetheproposedamendments.
+    </p>
+    <p>
+     BasedondirectionfromtheBoard,staffwilldraftanordinancefortheBoardtoreviewattheAugust26,2025,meeting.ThisordinancewouldchangethepercentageofSTRsbycategorytoasetnumberoflicensesandexcludedeed-restrictedunitsandhomesinSouthMainwhichdoesnothaveacaponSTRsfromtheresidentialdwellingunitscounts.
+    </p>
+    <p>
+     Anin-person/virtualregularmeetingoftheBoardofTrusteeswascalledtoorderbyMayorLibbyFayat7:05PM,Tuesday,July22,2025,attheBuenaVistaCommunityCenter,PinonRoom,715E.MainStreet,BuenaVista,Colorado,havingbeenpreviouslynoticedinaccordancewiththeColoradoOpenMeetingsLaw.
+    </p>
+   </section>
+   <section>
+    <h4 id="rollcall">
+     ROLLCALL
+    </h4>
+   </section>
+   <section>
+    <h5 id="attendeename">
+     AttendeeName
+    </h5>
+   </section>
+   <section>
+    <h5 id="title">
+     Title
+    </h5>
+   </section>
+   <section>
+    <h5 id="status">
+     Status
+    </h5>
+    <p>
+     LibbyFay
+    </p>
+    <p>
+     Mayor
+    </p>
+    <p>
+     Present
+    </p>
+    <p>
+     MaggieHuyck
+    </p>
+    <p>
+     Trustee
+    </p>
+    <p>
+     Present
+    </p>
+    <p>
+     AndrewRice
+    </p>
+    <p>
+     Trustee
+    </p>
+    <p>
+     Present
+    </p>
+    <p>
+     MichaRosenoer
+    </p>
+    <p>
+     Trustee
+    </p>
+    <p>
+     Present
+    </p>
+    <p>
+     DevinRowe
+    </p>
+    <p>
+     Trustee
+    </p>
+    <p>
+     Present
+    </p>
+    <p>
+     ChrisSturm
+    </p>
+    <p>
+     Trustee
+    </p>
+    <p>
+     Present
+    </p>
+    <p>
+     CindieSwisher
+    </p>
+    <p>
+     Trustee
+    </p>
+    <p>
+     Present
+    </p>
+    <p>
+     TownStaffPresent:
+    </p>
+    <p>
+     TownAdministratorBrianBergerTownAttorneyJeffParkerviaZoom
+    </p>
+    <p>
+     TownTreasurerPhillipPuckettAirportManagerJackWyles
+    </p>
+    <p>
+     AirportOperationsSupervisorChandraSwansonPublicWorksDirectorShawnWilliamsTownClerkPaulaBarnettPlanningDirectorMarikaKopp
+    </p>
+    <p>
+     SeniorPolicyAdvisor&amp;ProjectAdvocateJoelBenson
+    </p>
+   </section>
+   <section>
+    <h4 id="pledgeofallegiance">
+     PLEDGEOFALLEGIANCE
+    </h4>
+    <p>
+     MayorFayledthePledgeofAllegiance.
+    </p>
+   </section>
+   <section>
+    <h3 id="agendaadoptionmotionno-01-">
+     AGENDAADOPTIONMOTIONNO.01:
+    </h3>
+   </section>
+   <section>
+    <h3 id="results">
+     RESULTS
+    </h3>
+   </section>
+   <section>
+    <h3 id="moverseconder-ayes-">
+     MOVERSECONDER:AYES:
+    </h3>
+   </section>
+   <section>
+    <h3 id="carried">
+     CARRIED
+    </h3>
+    <p>
+     TrusteeHuyckTrusteeRosenor
+    </p>
+    <p>
+     Huyck,Rice,Rosenoer,Rowe,Strum,Swisher
+    </p>
+   </section>
+   <section>
+    <h3 id="movetoapprovetheagenda-">
+     MOVETOAPPROVETHEAGENDA.
+    </h3>
+   </section>
+   <section>
+    <h4 id="consentagenda">
+     CONSENTAGENDA
+    </h4>
+    <p>
+     Approvalofmattersthatareroutineinnaturethatrequirereviewand/orapproval,i.e.minutesandreports.(ProfessionalServiceAgreements(PSA)thatexceed$25,000.00requiretheConsentAgendatobeapprovedbyaRollCallvote)
+    </p>
+    <ol>
+     <li>
+      MinutesBoardofTrusteesRegularMeeting–July8,2025TreeAdvisoryBoardMeeting–June5,2025RecreationAdvisoryBoardMinutes–May21,2025RecreationAdvisoryBoardMinutes–June18,2025
+     </li>
+    </ol>
+   </section>
+   <section>
+    <h5 id="minutes">
+     Minutes
+    </h5>
+    <ol>
+     <li>
+      BoardofTrusteesRegularMeeting–July8,2025
+     </li>
+    </ol>
+    <p>
+     BoardofTrusteesRegularMeeting–July8,2025
+    </p>
+    <ol>
+     <li>
+      TreeAdvisoryBoardMeeting–June5,2025
+     </li>
+    </ol>
+    <p>
+     TreeAdvisoryBoardMeeting–June5,2025
+    </p>
+    <ol>
+     <li>
+      RecreationAdvisoryBoardMinutes–May21,2025
+     </li>
+    </ol>
+    <p>
+     RecreationAdvisoryBoardMinutes–May21,2025
+    </p>
+    <ol>
+     <li>
+      RecreationAdvisoryBoardMinutes–June18,2025
+     </li>
+    </ol>
+    <p>
+     RecreationAdvisoryBoardMinutes–June18,2025
+    </p>
+   </section>
+   <section>
+    <h4 id="townadministratorreport">
+     TownAdministratorReport
+    </h4>
+   </section>
+   <section>
+    <h4 id="townadministratorreport">
+     TownAdministratorReport
+    </h4>
+   </section>
+   <section>
+    <h4 id="towntreasurerreportandquarterlyfinancialstatusandu">
+     TownTreasurerReportandQuarterlyFinancialStatusandUpdate–2Q2025
+    </h4>
+   </section>
+   <section>
+    <h4 id="towntreasurerreportandquarterlyfinancialstatusandu">
+     TownTreasurerReportandQuarterlyFinancialStatusandUpdate–2Q2025
+    </h4>
+   </section>
+   <section>
+    <h4 id="airportmanagerreport">
+     AirportManagerReport
+    </h4>
+   </section>
+   <section>
+    <h4 id="airportmanagerreport">
+     AirportManagerReport
+    </h4>
+   </section>
+   <section>
+    <h4 id="recreationdirectorreport">
+     RecreationDirectorReport
+    </h4>
+   </section>
+   <section>
+    <h4 id="recreationdirectorreport">
+     RecreationDirectorReport
+    </h4>
+    <ol>
+     <li>
+      AdoptionofResolutionNo.57,Series2025,entitled,"ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,APPOINTINGRICHARDLUEBASANALTERNATEMEMBEROFTHEHISTORICPRESERVATIONCOMMITTEE."
+     </li>
+    </ol>
+    <p>
+     AdoptionofResolutionNo.57,Series2025,entitled,"ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,APPOINTINGRICHARDLUEBASANALTERNATEMEMBEROFTHEHISTORICPRESERVATIONCOMMITTEE."
+    </p>
+    <p>
+     Adoption
+    </p>
+    <p>
+     of
+    </p>
+    <p>
+     Resolution
+    </p>
+    <p>
+     No.
+    </p>
+    <p>
+     57,
+    </p>
+    <p>
+     Series
+    </p>
+    <p>
+     2025,
+    </p>
+    <p>
+     entitled,
+    </p>
+    <p>
+     "A
+    </p>
+   </section>
+   <section>
+    <h4 id="resolution">
+     RESOLUTION
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="board">
+     BOARD
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="trustees">
+     TRUSTEES
+    </h4>
+   </section>
+   <section>
+    <h4 id="for">
+     FOR
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="town">
+     TOWN
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="buena">
+     BUENA
+    </h4>
+   </section>
+   <section>
+    <h4 id="vista-">
+     VISTA,
+    </h4>
+   </section>
+   <section>
+    <h4 id="colorado-">
+     COLORADO,
+    </h4>
+   </section>
+   <section>
+    <h4 id="appointing">
+     APPOINTING
+    </h4>
+    <p>
+     RICHARD
+    </p>
+    <p>
+     LUEB
+    </p>
+   </section>
+   <section>
+    <h4 id="as">
+     AS
+    </h4>
+   </section>
+   <section>
+    <h4 id="an">
+     AN
+    </h4>
+   </section>
+   <section>
+    <h4 id="alternate">
+     ALTERNATE
+    </h4>
+   </section>
+   <section>
+    <h4 id="member">
+     MEMBER
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+    <p>
+     HISTORIC
+    </p>
+    <p>
+     PRESERVATION
+    </p>
+    <p>
+     COMMITTEE."
+    </p>
+   </section>
+   <section>
+    <h3 id="motionno-02-">
+     MOTIONNO.02:
+    </h3>
+   </section>
+   <section>
+    <h3 id="results">
+     RESULTS
+    </h3>
+   </section>
+   <section>
+    <h3 id="moverseconder-ayes-">
+     MOVERSECONDER:AYES:
+    </h3>
+   </section>
+   <section>
+    <h3 id="carried">
+     CARRIED
+    </h3>
+    <p>
+     TrusteeRoweTrusteeHuyck
+    </p>
+    <p>
+     Huyck,Rice,Rosenoer,Rowe,Strum,Swisher
+    </p>
+   </section>
+   <section>
+    <h3 id="movetoapprovetheconsentagenda-">
+     MOVETOAPPROVETHECONSENTAGENDA.
+    </h3>
+   </section>
+   <section>
+    <h4 id="publiccomment-audiotime1-10-">
+     PUBLICCOMMENT(audiotime1:10)
+    </h4>
+    <p>
+     SandyJaastad,acountyresident,sharedthatonJuly4th,shenarrowlyavoidedanaccidentwhilepullingoutoftheCityMarketparkinglot.Jaastadstatedthatduetovehiclesbeingallowedtoparkontheeastsideoftheparkinglotnexttothesidewalk,drivershaveachallengingtimeseeingifitiscleartopulloutontoHighway24.JaastadaskedtheBoardtotakeactionontheissuebeforeahorribleaccidentoccurs.
+    </p>
+    <p>
+     BuenaVistaHeritageExecutiveDirectorLisaWagnerrequestedanadjustmenttotheuseofthe
+    </p>
+    <p>
+     $10,000.00infundspreviouslyapprovedbytheBoardofTrusteesforcriticalsafetyimprovementsattheHistoricChaffeeCountyCourthouse.Wagnerreviewedthatinthefallof2024,fundingwasrequestedforasecondemergencyexittoaddressafirecodeviolation.Sincethatapproval,ithasbeendeterminedthatanelectricalupgraderepresentsamoreurgentimmediatesafetyconcern.WagnerrequestedthattheBoardconsiderallowingBuenaVistaHeritagetoreallocatehowthefundsarespent.
+    </p>
+   </section>
+   <section>
+    <h3 id="presentations">
+     PRESENTATIONS
+    </h3>
+   </section>
+   <section>
+    <h2 id="introductionofplanning-zoningcommissionapplicant-a">
+     IntroductionofPlanning&amp;ZoningCommissionApplicant(audiotime:1:15:31)
+    </h2>
+    <p>
+     LisaField,applicanttoserveasanalternatememberofthePlanning&amp;ZoningCommission,gaveabriefoverviewofwhysheisinterestedinservingontheCommissionandcontributetotheCommissionandthecommunityusingherexpertiseandexperienceasadeveloperwithafocusonplacemakingandstrategiclandmanagementtoprovidenecessaryhousingwhilepreservingagriculturallandandopenspace.
+    </p>
+    <p>
+     TrusteeRiceexpressedhisconcernsthatField'sprofessionalcareerasadeveloperandservingonthePlanning&amp;ZoningCommissionhastheappearanceofbeingaconflictofinterest.FieldstatedthatshedoesnotfeelservingontheCommissionwouldbeaconflictsinceherfocusisinthecountydevelopingagrihoods,blendingagriculturalandneighborhoods.TrusteeRiceaskedifFieldforeseesworkingwithinthetownlimitsinthefuture,andsherepliedno,thatisnotherfocus.
+    </p>
+   </section>
+   <section>
+    <h4 id="chaffeehousingauthorityandchaffeehousingtrustupdat">
+     ChaffeeHousingAuthorityandChaffeeHousingTrustUpdate(audiotime:1:20:34)
+    </h4>
+    <p>
+     ChaffeeHousingAuthorityExecutiveDirectorMarjoCurgusandChaffeeHousingTrustExecutiveDirectorReadMcCullochprovidedtheBoardwithanupdateonhousingactivitiesintheTownandCounty.TheBoard,Curgus,andMcCullochhadalengthydiscussionrelatedtohousingcosts,thedemandforhousing,affordablehousing,andworkforcehousing.
+    </p>
+   </section>
+   <section>
+    <h4 id="businessitems">
+     BUSINESSITEMS
+    </h4>
+   </section>
+   <section>
+    <h4 id="mountainfood-beveragellcdbastrangecraftbeercompany">
+     MountainFood&amp;BeverageLLCdbaStrangeCraftBeerCompanyinBVSalesRoomLiquorLicense(audiotime:1:52:51)
+    </h4>
+    <p>
+     TownClerkPaulaBarnettreviewedwiththeBoard,onFebruary11,thattheTownreceivedanemailfromRunco&amp;ProffittP.C.,submittingapermanentColoradoLiquorSalesRoomlicenseapplicationonbehalfofMountainFood&amp;BeverageLLC,doingbusinessasStrangeCraftBeerCompanyinBV,locatedat324EastMainStreet,ownersKenandAprilPishna.Barnettreviewedasalesroom,whichisanareawherealicensedwinery,limitedwinery,distillery,orbeerwholesalersellsandservesalcoholicbeveragesforconsumptiononthelicensedpremises,sellsalcoholicbeveragesinsealedcontainersforconsumptionoffthelicensedpremises,orboth.Theapplicantmustaffirmtothestatelicensingauthoritythattheyhavecompliedwithlocalzoningrestrictions.Uponreviewoftheapplication,whichinitiallyincludedthesaleofalcoholicbeveragesfromabeertrailer,itwasdeterminedthatitviolatedlocalzoninglaws.OnFebruary13,theTownClerksubmittedanobjectiontotheissuanceofthesalesroomlicensetothestatelicensingauthority.
+    </p>
+    <p>
+     Fromalanduseperspective,foodtrucks/trailersmaybepermittedastemporaryvendorsthroughthetemporaryusesandstructurescriteriaaslongastheproposedvendorsoperatesonanon-permanentandtemporarybasis,anditwouldnottriggertherequirementthatthelot'snon-conformingsitefeaturesandnon-conformingstructurecomeintocompliancewiththeUnifiedDevelopmentCode(UDC)meetingan85%minimumfrontagebuildoutatthesetback.Theproposedbeertrailercouldnotbepermittedasatemporaryvendorsinceapermanentstructureisrequiredforaliquorlicense.Asanalternative,theexistingpermanentstructurecouldbeutilizedtosellbeeriftheownerscompleteaChangeofUseprocess,whichwouldnotrequirethenon-confirminglottomeetthe85%minimumfrontagebuildoutsetbackrequirements.Afterseveralmonthsofmultiplediscussionsandexploringoptions,theownersdecidedtoutilizetheexistingstructureratherthanabeertrailer.TheChangeofUseprocesswascompleted,andtheyreceivedaCertificateofOccupancyfromtheChaffeeCountyBuildingDepartmentandapprovalfromtheChaffeeCountyFireProtectionDistrict.
+    </p>
+    <p>
+     TheBoardofTrusteesisresponsiblefordeterminingthattheproposedsalesroomwillnotviolatelocallandusezoninglaws,impacttraffic,noise,orotherneighborhoodconcernsinamannerinconsistentwithlocalregulationsorordinances,orthattheapplicantwillsufficiently
+    </p>
+    <p>
+     mitigateanyimpactsidentifiedbytheLocalLicensingAuthority.TheTowndoesnotissuealiquorlicenseforasalesroom.
+    </p>
+    <p>
+     ColoradoDepartmentofRevenueLiquorCriminalInvestigatorJoeDaiglecompletedasiteinspectiononJuly16,2025,andapprovedthelocationforaSalesRoomLiquorlicense.Proofofpossessionofthepremiseshasbeenprovided.PoliceChiefDeanMorgan,PlanningDirectorMarikaKopp,CodeEnforcementOfficerAnittaWroten,ChaffeeCountyFireProtectionDistrictChiefKiraJones,andChaffeeCountyConsumerProtectionSpecialistStefanieNelsonhavecompletedtheTown/CountyDepartmentalApprovalForm.SincetheTowndoesnotissueasalesroomlicense,backgroundchecks,andcompletingaNeeds&amp;DesiresPetitionfortheneighborhoodwerenotrequired.
+    </p>
+    <p>
+     KenandAprilPishnasharedwiththeBoardthatStrangeCraftBreweryhasbeeninbusinessfor15years.TheyandtheirbusinesspartnerschoseBuenaVistaasthelocationfortheirsalesroombecausetheyhadbeenvisitingtheareaforyearsandwantedtobeinamountaintown.ThePishna'sstatedthattheywillcontinuetoberesidentsofBuenaVistaandarelookingforwardtogrowingthebusinessandbuildingacommunitygatheringplace,providinggoodbeerandfood.
+    </p>
+    <p>
+     TrusteeSturminquiredaboutthebusiness'sseasonalnature,andKenPishnaexplainedthattheplanistooperateyear-round,weatherpermitting.Hourswillalignwiththefoodtruckschedule,runningfrom11:00AMto8:00PM.AprilPishnasharedthattheyarenotalate-nightestablishment,willoccasionallyhavelivemusic,andwillmonitorsoundlevelstoavoidnoisebeinganissue.
+    </p>
+    <p>
+     TrusteeRicestatedthathedoesnotobjecttotheconceptofthesalesroomandexpressedconcernthatapublichearinghasnotbeenscheduledtohonorthespiritofhowwedootherliquorlicenses.TownAdministratorBrianBergersaidthatthesalesroompermitwas"thefirstofitskind”forTownStaff,tookquiteabitofefforttogettothispoint,andthenextmeetingwhentheBoardcouldholdapublichearing,wouldbeattheendofAugust,whenthesummertourismseasonwouldnearlybeover.
+    </p>
+    <p>
+     TrusteeRosenormovedtoapprovethedeterminationthattheissuanceofaSalesRoomLicensetoStrangeCraftBeerinBVdoesnotimpacttraffic,noise,orotherneighborhoodconcernsinamannerthatisinconsistentwithlocalregulationsorordinances.TrusteeRicestatedthatalthoughhesupportsthebusiness,hefeelsthattheprocessforapprovingtheSalesRoomLiquorLicenseshouldhonortheestablishedliquorlicensingprocess,whichincludesholdingapublichearingandcompletingaNeeds&amp;DesiresPetition,andhewillbevotingnoonthemotion.
+    </p>
+   </section>
+   <section>
+    <h3 id="motionno-03-">
+     MOTIONNO.03:
+    </h3>
+   </section>
+   <section>
+    <h3 id="results">
+     RESULTS
+    </h3>
+   </section>
+   <section>
+    <h3 id="moverseconder-ayes-nyes-">
+     MOVERSECONDER:AYES:NYES:
+    </h3>
+   </section>
+   <section>
+    <h3 id="carried">
+     CARRIED
+    </h3>
+    <p>
+     TrusteeRosenorTrusteeHyuck
+    </p>
+    <p>
+     Huyck,Rosenoer,Rowe,Strum,Swisher
+    </p>
+    <p>
+     Rice
+    </p>
+   </section>
+   <section>
+    <h5 id="movetoapprovethedeterminationthattheissuanceofasal">
+     MOVETOAPPROVETHEDETERMINATIONTHATTHEISSUANCEOFASALESROOMLICENSETOSTRANGECRAFTBEERINBVDOESNOTIMPACTTRAFFIC,NOISE,OROTHERNEIGHBORHOODCONCERNSINAMANNERTHATISINCONSISTENTWITHLOCALREGULATIONSORORDINANCES.
+    </h5>
+   </section>
+   <section>
+    <h4 id="chicagoranchtrailproject-audiotime-2-16-00-">
+     ChicagoRanchTrailProject(audiotime:2:16:00)
+    </h4>
+    <p>
+     ShouldtheBoardofTrusteesapprovetheadoptionofResolutionNo.58,Series2025,entitled,"ARESOLUTIONOFTHEBOARDOFTRUSTEESFORTHETOWNOFBUENAVISTA,COLORADO,APPROVINGAPROFESSIONALSERVICESAGREEMENTWITHWESTERNSKYDYNAMICSFORTHECHICAGORANCHLOOPTRAILCONSTRUCTION."
+    </p>
+    <p>
+     Should
+    </p>
+    <p>
+     the
+    </p>
+   </section>
+   <section>
+    <h5 id="board">
+     Board
+    </h5>
+    <p>
+     of
+    </p>
+    <p>
+     Trustees
+    </p>
+    <p>
+     approve
+    </p>
+    <p>
+     the
+    </p>
+    <p>
+     adoption
+    </p>
+    <p>
+     of
+    </p>
+    <p>
+     Resolution
+    </p>
+    <p>
+     No.
+    </p>
+    <p>
+     58,
+    </p>
+    <p>
+     Series
+    </p>
+    <p>
+     2025,
+    </p>
+    <p>
+     entitled,
+    </p>
+    <p>
+     "A
+    </p>
+   </section>
+   <section>
+    <h4 id="resolution">
+     RESOLUTION
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="board">
+     BOARD
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="trustees">
+     TRUSTEES
+    </h4>
+   </section>
+   <section>
+    <h4 id="for">
+     FOR
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="town">
+     TOWN
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="buena">
+     BUENA
+    </h4>
+   </section>
+   <section>
+    <h4 id="vista-">
+     VISTA,
+    </h4>
+   </section>
+   <section>
+    <h4 id="colorado-">
+     COLORADO,
+    </h4>
+   </section>
+   <section>
+    <h4 id="approving">
+     APPROVING
+    </h4>
+   </section>
+   <section>
+    <h4 id="a">
+     A
+    </h4>
+    <p>
+     PROFESSIONAL
+    </p>
+    <p>
+     SERVICES
+    </p>
+   </section>
+   <section>
+    <h4 id="agreement">
+     AGREEMENT
+    </h4>
+    <p>
+     WITH
+    </p>
+    <p>
+     WESTERN
+    </p>
+    <p>
+     SKY
+    </p>
+    <p>
+     DYNAMICS
+    </p>
+   </section>
+   <section>
+    <h4 id="for">
+     FOR
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+    <p>
+     CHICAGO
+    </p>
+    <p>
+     RANCH
+    </p>
+    <p>
+     LOOP
+    </p>
+    <p>
+     TRAIL
+    </p>
+    <p>
+     CONSTRUCTION."
+    </p>
+    <p>
+     RecreationDirectorShaneBasfordprovidedtheBoardwithadetailedoverviewofthehistoryoftheChicagoRanchProjectandoutlinedtheplanningprocessandRequestforProposalsfortheChicagoRanchLoopTrailConstruction.StaffreviewedandrankedtheproposalsandrecommendedthattheBoardapproveaProfessionalServicesAgreementwithWesternSkyDynamicstocompletetheconstructionofthetrail.
+    </p>
+    <p>
+     TrusteeRicestatedthataweedcontrolplanshouldbeimplemented.BasfordnotedthatPublicWorksandRecreationStaffwillbedevelopingaweedcontrolplanfortheChicagoRanchLoopandthetrailalongGreggDrive.
+    </p>
+    <p>
+     TownTreasurerPhillipPuckettrequestedthattheBoardapproveamotiontoadjustthe2025CapitalImprovementFundfor$138,000.00inrevenuesandexpendituresfortheproject.
+    </p>
+   </section>
+   <section>
+    <h3 id="motionno-04-">
+     MOTIONNO.04:
+    </h3>
+   </section>
+   <section>
+    <h3 id="movetoapproveadjustmentstothe2025capitalimprovemen">
+     MOVETOAPPROVEADJUSTMENTSTOTHE2025CAPITALIMPROVEMENTFUNDFOR
+    </h3>
+   </section>
+   <section>
+    <h3 id="results">
+     RESULTS
+    </h3>
+   </section>
+   <section>
+    <h3 id="moverseconder-ayes-">
+     MOVERSECONDER:AYES:
+    </h3>
+   </section>
+   <section>
+    <h4 id="rollcall">
+     ROLLCALL
+    </h4>
+   </section>
+   <section>
+    <h3 id="carried">
+     CARRIED
+    </h3>
+    <p>
+     TrusteeHyuckTrusteeStrum
+    </p>
+    <p>
+     Huyck,Rice,Rosenoer,Rowe,Strum,Swisher
+    </p>
+   </section>
+   <section>
+    <h3 id="-138-000-00inrevenuesand-138-00-00expendituresfort">
+     $138,000.00INREVENUESAND$138,00.00EXPENDITURESFORTHECHICAGORANCHLOOPPROJECT.
+    </h3>
+   </section>
+   <section>
+    <h3 id="motionno-05-">
+     MOTIONNO.05:
+    </h3>
+   </section>
+   <section>
+    <h3 id="results">
+     RESULTS
+    </h3>
+   </section>
+   <section>
+    <h3 id="moverseconder-ayes-">
+     MOVERSECONDER:AYES:
+    </h3>
+   </section>
+   <section>
+    <h4 id="rollcall">
+     ROLLCALL
+    </h4>
+   </section>
+   <section>
+    <h3 id="carried">
+     CARRIED
+    </h3>
+    <p>
+     TrusteeSturmTrusteeRowe
+    </p>
+    <p>
+     Huyck,Rice,Rosenoer,Rowe,Strum,Swisher
+    </p>
+   </section>
+   <section>
+    <h5 id="movetoadoptresolutionno-58-approvingtheprofessiona">
+     MOVETOADOPTRESOLUTIONNO.58,APPROVINGTHEPROFESSIONALSERVICEAGREEMENTWITHWESTERNSKYDYNAMICSFORTHECHICAGORANCHLOOPTRAILCONSTRUCTION.
+    </h5>
+    <p>
+     CentralColoradoRegionalAirportFundBalanceAdjustment(audiotime:2:34:21)PuckettreviewedwiththeTrusteestheeventsthathaveoccurredsince2018thathaveresultedinanegativeAirportFundbalance.Staffwillimplementthefollowingprocessestoensureabalancedfundbalanceismaintained.
+    </p>
+    <p>
+     Central
+    </p>
+    <p>
+     Colorado
+    </p>
+    <p>
+     Regional
+    </p>
+    <p>
+     Airport
+    </p>
+    <p>
+     Fund
+    </p>
+   </section>
+   <section>
+    <h5 id="balance">
+     Balance
+    </h5>
+    <p>
+     Adjustment
+    </p>
+    <p>
+     (audio
+    </p>
+    <p>
+     time:
+    </p>
+    <p>
+     2:34:21)
+    </p>
+    <p>
+     Puckett
+    </p>
+    <p>
+     reviewed
+    </p>
+    <p>
+     with
+    </p>
+    <p>
+     the
+    </p>
+    <p>
+     Trustees
+    </p>
+    <p>
+     the
+    </p>
+    <p>
+     events
+    </p>
+    <p>
+     that
+    </p>
+    <p>
+     have
+    </p>
+    <p>
+     occurred
+    </p>
+    <p>
+     since
+    </p>
+    <p>
+     2018
+    </p>
+    <p>
+     that
+    </p>
+    <p>
+     have
+    </p>
+    <p>
+     resulted
+    </p>
+    <p>
+     in
+    </p>
+    <p>
+     a
+    </p>
+    <p>
+     negative
+    </p>
+    <p>
+     Airport
+    </p>
+    <p>
+     Fund
+    </p>
+    <p>
+     balance.
+    </p>
+    <p>
+     Staff
+    </p>
+    <p>
+     will
+    </p>
+    <p>
+     implement
+    </p>
+    <p>
+     the
+    </p>
+    <p>
+     following
+    </p>
+    <p>
+     processes
+    </p>
+    <p>
+     to
+    </p>
+    <p>
+     ensure
+    </p>
+    <p>
+     a
+    </p>
+    <p>
+     balanced
+    </p>
+    <p>
+     fund
+    </p>
+    <p>
+     balance
+    </p>
+    <p>
+     is
+    </p>
+    <p>
+     maintained.
+    </p>
+    <ul>
+     <li>
+      Reviewexpensesandrevenuestoensureabalancedannualbudget
+     </li>
+    </ul>
+    <p>
+     Reviewexpensesandrevenuestoensureabalancedannualbudget
+    </p>
+    <ul>
+     <li>
+      ReviewAirportstaffinglevels:Full-timeAdministrativeClerkversusapart-timeorsharedAdministrativeClerk
+     </li>
+    </ul>
+    <p>
+     ReviewAirportstaffinglevels:Full-timeAdministrativeClerkversusapart-timeorsharedAdministrativeClerk
+    </p>
+    <ul>
+     <li>
+      Becomemoreefficientininvoicingandcollectingtransientfees
+     </li>
+    </ul>
+    <p>
+     Becomemoreefficientininvoicingandcollectingtransientfees
+    </p>
+    <ul>
+     <li>
+      Increasefuelsalesmarginwithregularfuelpricingreviews,andeliminateAvFuel'scontractfuelpricingonJet-Afuel.AsofJune2025,themarginhasincreasedfrom37%to57%
+     </li>
+    </ul>
+    <p>
+     Increasefuelsalesmarginwithregularfuelpricingreviews,andeliminateAvFuel'scontractfuelpricingonJet-Afuel.AsofJune2025,themarginhasincreasedfrom37%to57%
+    </p>
+    <ul>
+     <li>
+      Testing:recentlyscheduledopsandinquiriesshouldgenerateadditionalrevenue
+     </li>
+    </ul>
+    <p>
+     Testing:recentlyscheduledopsandinquiriesshouldgenerateadditionalrevenue
+    </p>
+    <ul>
+     <li>
+      ConsideradditionalmarketingtogenerateadditionalrevenuePuckettstatedthattobalancethefund,theStaffproposesaone-timetransferof$370,000fromtheGeneralFundtotheAirportFundtocover:
+     </li>
+    </ul>
+    <p>
+     Consideradditionalmarketingtogenerateadditionalrevenue
+    </p>
+    <p>
+     Puckettstatedthattobalancethefund,theStaffproposesaone-timetransferof$370,000fromtheGeneralFundtotheAirportFundtocover:
+    </p>
+    <ul>
+     <li>
+      $250,000tobringAirportFundbalancebackto$0
+     </li>
+    </ul>
+    <p>
+     $250,000tobringAirportFundbalancebackto$0
+    </p>
+    <ul>
+     <li>
+      $120,000forthreemonthsofoperatingexpensestoalignwiththeTown'sEnterpriseFundReservepolicy
+     </li>
+    </ul>
+    <p>
+     $120,000forthreemonthsofoperatingexpensestoalignwiththeTown'sEnterpriseFundReservepolicy
+    </p>
+    <p>
+     TrusteeRosenoerlefttheroomat8:36PMandattendedthemeetingviaZoom.
+    </p>
+    <p>
+     Puckettstatedthatifthetransferoffundsisapproved,itwouldimpacttheEnterpriseFundStatusin2026,whichaffectstheabilitytotakeondebtforexpensesandimprovementsattheairports.
+    </p>
+    <p>
+     TheTrusteesdiscussedstrategiestoavoidfuturefunddeficits,theintangiblevalueofhavingtheairportforemergencyservicessupportandstagingduringfires,andthepossibilityofrequestingadditionalfundingfromtheCounty.
+    </p>
+   </section>
+   <section>
+    <h3 id="motionno-06-">
+     MOTIONNO.06:
+    </h3>
+   </section>
+   <section>
+    <h3 id="results">
+     RESULTS
+    </h3>
+   </section>
+   <section>
+    <h3 id="moverseconder-ayes-">
+     MOVERSECONDER:AYES:
+    </h3>
+   </section>
+   <section>
+    <h4 id="rollcall">
+     ROLLCALL
+    </h4>
+   </section>
+   <section>
+    <h3 id="carried">
+     CARRIED
+    </h3>
+    <p>
+     TrusteeRiceTrusteeSwisher
+    </p>
+    <p>
+     Huyck,Rice,Rosenoer,Rowe,Strum,Swisher
+    </p>
+   </section>
+   <section>
+    <h3 id="movetoapprovetheone-timetransferof-370-000-00fromt">
+     MOVETOAPPROVETHEONE-TIMETRANSFEROF$370,000.00FROMTHEGENERALFUNDTOTHEAIRPORTFUND.
+    </h3>
+   </section>
+   <section>
+    <h4 id="augmentationcertificateacceptancestructure-audioti">
+     AugmentationCertificateAcceptanceStructure(audiotime:2:54:40)
+    </h4>
+    <p>
+     SeniorPolicyAdvisor&amp;ProjectAdvocateJoelBensonprovidedtheBoardwithareviewofadraftframeworktoconsideracceptingwateraugmentationcertificatesforspecificdevelopmentprojects.
+    </p>
+    <p>
+     a
+    </p>
+    <p>
+     draft
+    </p>
+    <p>
+     framework
+    </p>
+    <p>
+     to
+    </p>
+    <p>
+     consider
+    </p>
+    <p>
+     accepting
+    </p>
+    <p>
+     water
+    </p>
+    <p>
+     augmentation
+    </p>
+    <p>
+     certificates
+    </p>
+    <p>
+     for
+    </p>
+    <p>
+     specific
+    </p>
+    <p>
+     development
+    </p>
+    <p>
+     projects.
+    </p>
+    <p>
+     TrusteeRosenoerjoinedthemeetinginpersonat9:04PM.
+    </p>
+    <p>
+     TheTrusteesandStaffhadalengthydiscussionontheprosandconsofwateraugmentationcertificatesandhavingaprocessandpolicy.BensonstatedhewillcompilethecommentsandpresentaproposaltotheBoardatafuturemeeting.
+    </p>
+   </section>
+   <section>
+    <h4 id="railroadcrossingreimbursementagreement-audiotime-3">
+     RailroadCrossingReimbursementAgreement(audiotime:3:29:04)
+    </h4>
+    <p>
+     ShouldtheBoardofTrusteesapprovetheadoptionofResolutionNo.59,Series2025,entitled,"ARESOLUTIONOFTHETOWNOFBUENAVISTA,COLORADO,APPROVINGAREIMBURSEMENTAGREEMENTBETWEENUNIONPACIFICRAILROADCOMPANYAND
+    </p>
+    <p>
+     Should
+    </p>
+    <p>
+     the
+    </p>
+   </section>
+   <section>
+    <h5 id="board">
+     Board
+    </h5>
+    <p>
+     of
+    </p>
+    <p>
+     Trustees
+    </p>
+    <p>
+     approve
+    </p>
+    <p>
+     the
+    </p>
+    <p>
+     adoption
+    </p>
+    <p>
+     of
+    </p>
+    <p>
+     Resolution
+    </p>
+    <p>
+     No.
+    </p>
+    <p>
+     59,
+    </p>
+    <p>
+     Series
+    </p>
+    <p>
+     2025,
+    </p>
+    <p>
+     entitled,
+    </p>
+    <p>
+     "A
+    </p>
+   </section>
+   <section>
+    <h4 id="resolution">
+     RESOLUTION
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="the">
+     THE
+    </h4>
+   </section>
+   <section>
+    <h4 id="town">
+     TOWN
+    </h4>
+   </section>
+   <section>
+    <h4 id="of">
+     OF
+    </h4>
+   </section>
+   <section>
+    <h4 id="buena">
+     BUENA
+    </h4>
+   </section>
+   <section>
+    <h4 id="vista-">
+     VISTA,
+    </h4>
+   </section>
+   <section>
+    <h4 id="colorado-">
+     COLORADO,
+    </h4>
+   </section>
+   <section>
+    <h4 id="approving">
+     APPROVING
+    </h4>
+   </section>
+   <section>
+    <h4 id="a">
+     A
+    </h4>
+    <p>
+     REIMBURSEMENT
+    </p>
+   </section>
+   <section>
+    <h4 id="agreement">
+     AGREEMENT
+    </h4>
+   </section>
+   <section>
+    <h4 id="between">
+     BETWEEN
+    </h4>
+    <p>
+     UNION
+    </p>
+    <p>
+     PACIFIC
+    </p>
+    <p>
+     RAILROAD
+    </p>
+    <p>
+     COMPANY
+    </p>
+   </section>
+   <section>
+    <h4 id="and">
+     AND
+    </h4>
+   </section>
+   <section>
+    <h3 id="thetownofbuenavista-colorado-">
+     THETOWNOFBUENAVISTA,COLORADO."
+    </h3>
+    <p>
+     BergerreviewedwiththeTrusteesthatsince2004,afourthrailroadcrossinghasbeencontemplatedacrossSteeleDrive.ThecrossingwouldalleviatepressureattheBaylor-DepaulintersectionandprovideadirectconnectionforemergencyservicestoUSHighway24.
+    </p>
+    <p>
+     ColoradoDepartmentofTransportation(CDOT)SanLuisValleyTransportationPlanningRegion's10-yearprioritylisthasidentifiedtheUSHighway24-SteeleDriveintersectiontobesignalized,eitherasa3-legor4-legintersection,contingentontheabilitytocrosstherailroadatthatlocation.BergerreviewedtheprocessesthattheTown,UnionPacificRailroadCompany,CDOT,andthePublicUtilitiesCommissionneedtotaketomakethedetermination.However,beforetheRailroadcommitstosendingarepresentative,theyrequireareimbursementagreementtobeexecuted.TheReimbursementAgreementamountis
+    </p>
+    <p>
+     $35,000.00,with$25,000.00allocatedtowardstheprojectinthe2025Budgettoinitiatetheprocess.Additionalfundsmaybeconsideredin2026.Budget.
+    </p>
+   </section>
+   <section>
+    <h3 id="motionno-07-">
+     MOTIONNO.07:
+    </h3>
+   </section>
+   <section>
+    <h5 id="movetoadoptresolutionno-59approvingareimbursementa">
+     MOVETOADOPTRESOLUTIONNO.59APPROVINGAREIMBURSEMENTAGREEMENTBETWEENUNIONPACIFICRAILROADCOMPANYANDTHETOWNOFBUENAVISTA.
+    </h5>
+   </section>
+   <section>
+    <h3 id="results">
+     RESULTS
+    </h3>
+   </section>
+   <section>
+    <h3 id="moverseconder-ayes-">
+     MOVERSECONDER:AYES:
+    </h3>
+   </section>
+   <section>
+    <h4 id="rollcall">
+     ROLLCALL
+    </h4>
+   </section>
+   <section>
+    <h3 id="carried">
+     CARRIED
+    </h3>
+    <p>
+     TrusteeRiceTrusteeRowe
+    </p>
+    <p>
+     Huyck,Rice,Rosenoer,Rowe,Strum,Swisher
+    </p>
+   </section>
+   <section>
+    <h4 id="trustee-staffinteraction-audiotime-3-33-47-">
+     TRUSTEE/STAFFINTERACTION(audiotime:3:33:47)
+    </h4>
+    <p>
+     TheBoarddiscussedandagreedtoallowBuenaVistaHeritageMuseumtoreallocatethe
+    </p>
+    <p>
+     $10,000.00foremergencyelectricalimprovements.
+    </p>
+   </section>
+   <section>
+    <h3 id="motionno-08-">
+     MOTIONNO.08:
+    </h3>
+   </section>
+   <section>
+    <h3 id="movetoapprovetoallowbuenavistaheritagemuseumtoreal">
+     MOVETOAPPROVETOALLOWBUENAVISTAHERITAGEMUSEUMTOREALLOCATETHE
+    </h3>
+   </section>
+   <section>
+    <h3 id="results">
+     RESULTS
+    </h3>
+   </section>
+   <section>
+    <h3 id="moverseconder-ayes-">
+     MOVERSECONDER:AYES:
+    </h3>
+   </section>
+   <section>
+    <h4 id="rollcall">
+     ROLLCALL
+    </h4>
+   </section>
+   <section>
+    <h3 id="carried">
+     CARRIED
+    </h3>
+    <p>
+     TrusteeRiceTrusteeHuyck
+    </p>
+    <p>
+     Huyck,Rice,Rosenoer,Rowe,Strum,Swisher
+    </p>
+   </section>
+   <section>
+    <h5 id="-10-000-00oftownfundingdesignatedforimprovementsto">
+     $10,000.00OFTOWNFUNDINGDESIGNATEDFORIMPROVEMENTSTOTHEFIREESCAPETOBEUSEDFOREMERGENCYELECTRICALIMPROVEMENTS.
+    </h5>
+    <p>
+     TheBoarddiscussedtheCityMarketparkinglotandtrafficissues,andBergerstatedhewillcontactKroger-CityMarketrepresentativestoexploreoptions.
+    </p>
+    <p>
+     Trusteesreportedonorcommentedaboutrecentandupcomingevents,activities,andtopics.
+    </p>
+   </section>
+   <section>
+    <h3 id="motionno-09-">
+     MOTIONNO.09:
+    </h3>
+   </section>
+   <section>
+    <h3 id="results">
+     RESULTS
+    </h3>
+   </section>
+   <section>
+    <h3 id="moverseconder-ayes-">
+     MOVERSECONDER:AYES:
+    </h3>
+   </section>
+   <section>
+    <h3 id="carried">
+     CARRIED
+    </h3>
+    <p>
+     TrusteeRiceTrusteeHuyck
+    </p>
+    <p>
+     Huyck,Rice,Rosenoer,Rowe,Swisher
+    </p>
+   </section>
+   <section>
+    <h3 id="therebeingnofurtherbusinesstocomebeforetheboard-th">
+     THEREBEINGNOFURTHERBUSINESSTOCOMEBEFORETHEBOARD,THEMEETINGBEADJOURNEDAT10:00PM.
+    </h3>
+    <p>
+     Respectfullysubmitted:
+    </p>
+    <p>
+     LibbyFay,Mayor
+    </p>
+   </section>
+   <section>
+    <h5 id="paulabarnett-townclerk">
+     PaulaBarnett,TownClerk
+    </h5>
+   </section>
+   <section>
+    <h3 id="-minutesofthebuenavistaboardoftrusteesandbuenavist">
+     ‌MINUTESOFTHEBUENAVISTABOARDOFTRUSTEESANDBUENAVISTASCHOOLDISTRICTBOARDOFEDUCATION
+    </h3>
+   </section>
+   <section>
+    <h3 id="worksession">
+     WORKSESSION
+    </h3>
+   </section>
+   <section>
+    <h3 id="tuesday-august12-2025">
+     Tuesday,August12,2025
+    </h3>
+   </section>
+   <section>
+    <h5 id="minutesofthemeetingsoftheboardoftrusteesareatransc">
+     MINUTESOFTHEMEETINGSOFTHEBOARDOFTRUSTEESAREATRANSCRIPTOFTHEGOVERNINGBODY'SACTIONSRATHERTHANAVERBATIMRECORDOFDELIBERATIONS.
+    </h5>
+   </section>
+   <section>
+    <h4 id="worksessionat6-00pm-townclerkandtownadministrator">
+     WorkSessionat6:00PM–TownClerkandTownAdministrator
+    </h4>
+    <p>
+     MayorLibbyFay,TrusteesMaggieHuyck,AndrewRice,MichaRosenoer,DevinRowe,CindieSwisher,andChrisSturmwereinattendanceforthediscussion.AlsopresentwereTownAdministratorBrianBerger,PoliceChiefDeanMorgan,OfficerPomfret,PlanningDirectorMarikaKopp,Planner1CarlyCroft,PlanningTechnicianAllyKennedy,PublicWorksDirectorShawnWilliams,DeputyClerkEdBarkowski,andBuenaVistaSchoolDistrictBoardMembersSuperintendentLisaYatesandJessicaCrites,BrettMitchell,LynnMontoya,andNormNyberg.
+    </p>
+    <p>
+     Anin-person/virtualjointworksessionoftheBoardofTrusteesandBuenaVistaSchoolDistrictBoardofEducationwascalledtoorderbyMayorLibbyFayat6:00PM,Tuesday,August12,2025,attheChaffeeCountyPublicSafetyComplex,200SteeleDrive,BuenaVista,Colorado,havingbeenpreviouslynoticedinaccordancewiththeColoradoOpenMeetingsLaw.
+    </p>
+   </section>
+   <section>
+    <h4 id="rollcall">
+     ROLLCALL
+    </h4>
+   </section>
+   <section>
+    <h5 id="attendeename">
+     AttendeeName
+    </h5>
+   </section>
+   <section>
+    <h5 id="title">
+     Title
+    </h5>
+   </section>
+   <section>
+    <h5 id="status">
+     Status
+    </h5>
+    <p>
+     LibbyFay
+    </p>
+    <p>
+     Mayor
+    </p>
+    <p>
+     Present
+    </p>
+    <p>
+     MaggieHuyck
+    </p>
+    <p>
+     Trustee
+    </p>
+    <p>
+     Present
+    </p>
+    <p>
+     AndrewRice
+    </p>
+    <p>
+     Trustee
+    </p>
+    <p>
+     Present
+    </p>
+    <p>
+     MichaRosenoer
+    </p>
+    <p>
+     Trustee
+    </p>
+    <p>
+     Present
+    </p>
+    <p>
+     DevinRowe
+    </p>
+    <p>
+     Trustee
+    </p>
+    <p>
+     Present
+    </p>
+    <p>
+     ChrisSturm
+    </p>
+    <p>
+     Trustee
+    </p>
+    <p>
+     PresentviaZoom
+    </p>
+    <p>
+     CindieSwisher
+    </p>
+    <p>
+     Trustee
+    </p>
+    <p>
+     Present
+    </p>
+    <p>
+     TownStaffPresent:
+    </p>
+    <p>
+     TownAdministratorBrianBergerPoliceChiefDeanMorganSeniorPolicyAdvisor&amp;ProjectAdvocateJoelBensonOfficerFrazerPomfretPlanningDirectorMarikaKoppPlanner1CarlyCroft
+    </p>
+    <p>
+     PlanningTechnicianAllyKennedyPublicWorksDirectorShawnWilliamsDeputyTownClerkEdBarkowski
+    </p>
+   </section>
+   <section>
+    <h3 id="discussionitems">
+     DISCUSSIONITEMS
+    </h3>
+   </section>
+   <section>
+    <h4 id="lawenforcementschoolpartnershipprogramupdateandpro">
+     LawEnforcementSchoolPartnershipProgramUpdateandProposedAmendments
+    </h4>
+    <p>
+     (audiotime:00:04:18)
+    </p>
+    <p>
+     ChiefDeanMorganprovidedanoverviewoftheevolvingpartnershipbetweenthePoliceDepartmentandtheSchoolDistrict,notingthattheSchoolResourceOfficer(SRO)program,originallystaffedbyonededicatedofficer,wasrestructuredduetolimitedstaffingandtheneedforflexibility.Underthenewmodel,allofficersshareSROdutieswhileremainingavailablefortownwidecalls,ensuringastrongschoolpresencewhileusingresourcesefficiently.Morganreviewedstatisticsforcallsandcasereportsandhighlightedroutineschoolwalk-throughsthat,alongwithsecuredbuildingdesigns,haveimprovedcampussafety.Whileinternaltraininghasbeeneffective,Morganemphasizedtheneedtobetterinformparentsaboutemergencyprocedurestopreventconfusionandpanic.
+    </p>
+    <p>
+     OfficerFraserPomfret,aformerpoliceofficerinScotlandwhomovedtoColoradoin2021,joinedtheBuenaVistaPoliceDepartmentafterservinginSummitCountyasaK-9handlerandnowfocusesonschoolsafety.HeemphasizedimprovingtrainingandpreparednessthroughtheStandardResponseProtocol,activethreatresponse,andclosecoordinationwithschoolstaff.Pomfretdescribedpre-school-yearsessionswithstaffthatincludescenariodiscussionsanddrills,alongwithpracticeduringschoolbreakstoensurereadiness.
+    </p>
+    <p>
+     TownAdministratorBrianBergernotedthattheSROagreementbetweentheBuenaVistaPoliceDepartmentandBuenaVistaSchoolDistrictwasaleadingcatalystfortheevening’smeeting.BuenaVistaSchoolDistrictSuperintendentLisaYatesexpressedgratitudefortheagreement,praisingitseffectivenessandthepolicespecializednatureofresponse.
+    </p>
+    <p>
+     BuenaVistaSchoolDistrictBallotInitiativeUpdate(audiotime:00:26:22)
+    </p>
+    <p>
+     Buena
+    </p>
+    <p>
+     Vista
+    </p>
+    <p>
+     School
+    </p>
+    <p>
+     District
+    </p>
+    <p>
+     Ballot
+    </p>
+    <p>
+     Initiative
+    </p>
+    <p>
+     Update
+    </p>
+    <p>
+     (audio
+    </p>
+    <p>
+     time:
+    </p>
+    <p>
+     00:26:22)
+    </p>
+    <p>
+     BuenaVistaSchoolDistrictSuperintendentLisaYatesoutlinedfundingchangessince2022andintroducedtwoupcomingballotmeasures.Thefirstisabondproposalthatwouldnotraisetaxesbutwouldextendexistingvoter-approvedfundingtocompleteprojectsinthedistrict’smasterfacilityplan,withafocusonmaintenance,preservation,safety,security,andaccessibility.Thesecondisaproposedmilllevy,whichwouldrequireataxincreasetoprovideadditionalfundingforteacherandstaffsalaries,raisingstartingteacherpayfrom$42,000to
+    </p>
+    <p>
+     $50,000andhelpingthedistrictattractandretaineducators.Yatesalsohighlightedongoingbudgetchallenges,notingthatstateandfederalfundingremaininadequate,anddiscussedfactorsaffectingenrollmentandstaffing,includingChaffeeCounty’slivablewage,highhousingcosts,decliningbirthrates,andBuenaVista’s“ruralresort”reputation,whichcandeterfamilieswithschool-agechildrenfromrelocatingtothearea.
+    </p>
+    <p>
+     TownofBuenaVistaComprehensivePlanUpdate(audiotime:00:41:09)
+    </p>
+   </section>
+   <section>
+    <h5 id="town">
+     Town
+    </h5>
+    <p>
+     of
+    </p>
+    <p>
+     Buena
+    </p>
+    <p>
+     Vista
+    </p>
+    <p>
+     Comprehensive
+    </p>
+    <p>
+     Plan
+    </p>
+    <p>
+     Update
+    </p>
+    <p>
+     (audio
+    </p>
+    <p>
+     time:
+    </p>
+    <p>
+     00:41:09)
+    </p>
+    <p>
+     PlanningDirectorMarikaKoppprovidedanupdateontheTown’scomprehensiveplan,highlightingeducationandyouthengagementascentraltotheprocess.Sheexplainedthattheplanwillguidelong-rangedecisionsoverthenextdecadewhilepreservingthequalitiesthatmakeBuenaVistaunique.Youthinvolvementhasbeenapriority,withparentsandstudentsparticipatingatmultiplestages.Thisincludedastudentandschoolboardmemberservingonthesteeringcommitteeandoutreacheffortsatfarmersmarkets,theyouthsummerkickoff,concerts,andtherodeo.Developmentoftheplanwassupportedbya$100,000grantawardedin2023andadvancedthroughphasesofcommunityvisioning,existingconditionsanalysis,engagementcheck-ins,plandrafting,andfinalpublicoutreach.
+    </p>
+    <p>
+     School-relatedgoalsarewoventhroughouttheplan,includingexpandinghousingforeducatorsandessentialworkers,increasingaccesstoearlychildhoodeducationandlicensedchildcare,creatingmorerecreationalspacesforteens,andcollaboratingwithschoolsoninteractiveengagementtoolsandfacilitiesplanning.Koppemphasizedtheimportanceofmaintainingcommunityconnectionsamidrisinghousingcostsandincreasedsecond-homeownership,thankedparticipantsfortheirinput,andurgedresidentstoholdtheTownaccountable,remainadaptable,andcontinuethepartnershipsthatshapedtheplan.
+    </p>
+   </section>
+   <section>
+    <h4 id="buenavistacoloradomountaincollegefacilitybackgroun">
+     BuenaVistaColoradoMountainCollegeFacilityBackgroundandUpdate
+    </h4>
+    <p>
+     (audiotime:00:51:36)
+    </p>
+    <p>
+     SuperintendentLisaYatesprovidedbackgroundontheColoradoMountainCollege(CMC)facilityinBuenaVista,notingitscurrentleasetoMountainBOCESwithsubleasestotheBuenaVistaPublicLibraryandColoradoStateUniversity(CSU)extension.Originallydonatedforeducationalpurposes,thebuildinghasseendecliningusesinceitsdaysservingDepartmentofCorrectionsprograms.CMC,whichoperatesasataxdistrictoutsidethestatecommunitycollegesystem,exploredsellingorswappingthepropertyin2018,andashort-termpreschoolleasebyBVSchoolsprovedunsustainable.AfterSalidavotersjoinedtheCMCdistrictin2019,CMCrelocatedoperations,andrisingcoursecostsledBVSchoolstopartnerwithWesternColoradoUniversityandAdamsStateUniversity,savingmoneywhilestillmaintaininglimitedaccesstoCMCelectives.CMChasindicatedpotentiallysellingtheBuenaVistafacility,withproceedslikelydirectedtoSalida,andwhileBVSchoolsdoesnotseeaneedforannexation,Yatesemphasizedthedistrict’sintenttoremainactivelyengagedincommunitydiscussionsaboutthebuilding’sfuture.
+    </p>
+    <p>
+     TheBoardofTrusteesraisedquestionsregardingtheproperty’sdeedrestrictionsfavoringeducationalservices,itspotentialusefortradeschooling,andtheagegroupsthatmightbeserved.Theyalsodiscussedpossiblenon-educationaluses,alongwithahypotheticalpurchaseandleasescenario.
+    </p>
+    <p>
+     WaterDiscussion(audiotime:01:15:37)
+    </p>
+   </section>
+   <section>
+    <h5 id="water">
+     Water
+    </h5>
+    <p>
+     Discussion
+    </p>
+    <p>
+     (audio
+    </p>
+    <p>
+     time:
+    </p>
+    <p>
+     01:15:37)
+    </p>
+    <p>
+     TownAdministratorBrianBergerprovidedanoverviewofBuenaVista’swatermanagement,beginningwithsystemcapacityoutlinedinthe2021WaterResourcesMasterPlanandannualconsumptionstatistics.Hestressedtheneedtomonitorwateruseatboththeindividualandmunicipallevels,focusingonmaximizingcurrentcapacitywhileplanningforfutureexpansion.TheTown’sWaterConservationPlanisexpectedtoreachfinaldraftformbySeptember.
+    </p>
+    <p>
+     Bergercitedanaverageof347gallonsperdayperSingleFamilyEquivalentbetween2015and2020andexplainedhowsupplyisaffectedbyweatherpatternsandpeakdemand,suchasthisJuly.Heacknowledgedminorsystemlossesasnormal,sinceundergroundleaksarenotimmediatelyvisible,andoutlinedtheWaterTreatmentPlantExpansionProject,whichwillsignificantlyincreaseproduction.
+    </p>
+    <p>
+     HealsoraisedthepossibilityofamoreaggressivetieredratestructureasarecommendationintheWaterConservationPlantoencourageconservationandflattenusagecurves.
+    </p>
+    <p>
+     HighlightingBuenaVistaHighSchool’sapprovedirrigationdesignof46,928gallonsperday,excludingnativegrasses,hereportedthatactual2023usenearlydoubledthatfigure,peakingat95,132gallonsperday.HeemphasizedthisasastrainontheTown’swatersystemandexpressedinterestinworkingwiththeschooltoreduceusage.Heofferedstaffsupporttodevelopareductionplanandsuggestedexploringanirrigationwelltoshifttheschool’sdemandoffthemunicipaltreatedwaterdistributionsystem.
+    </p>
+    <p>
+     UpperArkansasWaterConservancyDistrictGeneralManagerGregFeltdiscussedtheorganization’saugmentationplanandendorsedBerger’sproposalfortheschooltoinstallanirrigationwell.Henotedthatamortizingcostsandpursuingcapitalgrantscouldmaketheprojectfeasible,withlong-termsavingsfortheschool,whichcurrentlyspendsover$50,000annuallyonwater.
+    </p>
+    <p>
+     Trusteesaskedifbondfundscouldhelpfundawell,butYatesconfirmeditwasnotcurrentlyincludedintheMasterPlan.Theynotedthatshiftingtheschool’sdemandoffthemunicipalsystemwouldfreewaterforotherusers.Yatesthenproposedformingawatersubcommittee,andtheBoardsagreedthatwouldbeagoodnextstep.
+    </p>
+    <p>
+     Meetingadjournedat7:53pmRespectfullysubmitted:
+    </p>
+    <p>
+     LibbyFay,Mayor
+    </p>
+    <p>
+     EdBarkowski,DeputyTownClerk
+    </p>
+   </section>
+   <section>
+    <h3 id="-buena-vista-tree-advisory-board-july-3-2025">
+     ‌Buena Vista Tree Advisory Board July 3,2025
+    </h3>
+   </section>
+   <section>
+    <h5 id="-">
+     ,
+    </h5>
+    <p>
+     In attendance were: Sarah Kuhn, Roy Gertson , Alex Bruce , Dan Murray, Shawn Williams, Public Works Director. Leeza Vasko CSFS , Mason CSFS intern Having a quorum, meeting commenced at 0905
+    </p>
+    <p>
+     <strong>
+      Agenda, tree at Railroad &amp; Cedar ,Motion by Chair Sarah 2nd by Dan to approve. . Approved by members
+     </strong>
+    </p>
+    <p>
+     , tree at Railroad &amp; Cedar ,Motion by Chair Sarah 2nd by Dan to approve. . Approved by members
+    </p>
+   </section>
+   <section>
+    <h5 id="minutes-june-5-2025-minutes-motion-to-approve-by-s">
+     Minutes: June 5 , 2025 minutes Motion to approve by Sarah 2nd by Dan , members approved
+    </h5>
+    <p>
+     : June 5 , 2025 minutes Motion to approve by Sarah 2nd by Dan , members approved
+    </p>
+   </section>
+   <section>
+    <h5 id="voluntarytime">
+     VoluntaryTime
+    </h5>
+    <p>
+     Ash tree inspections = 12 hrs Admin      = 2
+    </p>
+    <p>
+     year total = 104 Hrs + 14 = 118 hrs
+    </p>
+    <p>
+     <strong>
+      AnnualPlan; 2025 work plan reviewed, Upcoming survey of tree pruning &amp; removals. Members will start their lists on a Google Doc. Also, a tour will be scheduled in August. Shawn wants the project to be out for bids in October. Budget is $ 35K.
+     </strong>
+    </p>
+    <p>
+     ; 2025 work plan reviewed, Upcoming survey of tree pruning &amp; removals. Members will start their lists on a Google Doc. Also, a tour will be scheduled in August. Shawn wants the project to be out for bids in October. Budget is $ 35K.
+    </p>
+   </section>
+   <section>
+    <h5 id="publiccomment-none">
+     PublicComment:none
+    </h5>
+    <p>
+     none
+    </p>
+   </section>
+   <section>
+    <h5 id="publicworks-shawnpresented-items-">
+     PublicWorks:Shawnpresented items;
+    </h5>
+   </section>
+   <section>
+    <h4 id="-">
+     :
+    </h4>
+    <p>
+     presented items;
+    </p>
+   </section>
+   <section>
+    <h5 id="s-main-phase-two-need-several-trees-replaced-due-t">
+     S. Main Phase Two need several trees replaced due to deer damage. ( wire guards were not installed ) . Approx 20 trees are involved.
+    </h5>
+   </section>
+   <section>
+    <h5 id="s-main-phase-two-need-several-trees-replaced-due-t">
+     S. Main Phase Two need several trees replaced due to deer damage. ( wire guards were not installed ) . Approx 20 trees are involved.
+    </h5>
+    <ol>
+     <li>
+      Boulders has a been planted, but no deer guards installed. Shawn will work with developer. They want to remove the native grass ground-cover and install fabric with cobble rock covering. These planting areas are within the Town’s ROW. The stormwater detention pond still need improvements.
+     </li>
+    </ol>
+    <p>
+     Boulders has a been planted, but no deer guards installed. Shawn will work with developer. They want to remove the native grass ground-cover and install fabric with cobble rock covering. These planting areas are within the Town’s ROW. The stormwater detention pond still need improvements.
+    </p>
+    <ol>
+     <li>
+      Cordova Park has been constructed and trees planted. This park will be maintained by the Town Public Works Dept. Opening celebration is July 12 at 0930.
+     </li>
+    </ol>
+    <p>
+     Cordova Park has been constructed and trees planted. This park will be maintained by the Town Public Works Dept. Opening celebration is July 12 at 0930.
+    </p>
+    <ol>
+     <li>
+      Town Council has adopted mandatory water restrictions. As a water conservation measure with time restrictions &amp; alternating Odd /Even addresses.
+     </li>
+    </ol>
+    <p>
+     Town Council has adopted mandatory water restrictions. As a water conservation measure with time restrictions &amp; alternating Odd /Even addresses.
+    </p>
+    <ol>
+     <li>
+      Shawn related Forest Service meeting relating to management techniques within the Cottonwood Drainages. A tour is to be scheduled. Shawn shared the Water Ad- visory Board Vision &amp; Goals.
+     </li>
+    </ol>
+    <p>
+     Shawn related Forest Service meeting relating to management techniques within the Cottonwood Drainages. A tour is to be scheduled. Shawn shared the Water Ad- visory Board Vision &amp; Goals.
+    </p>
+    <p>
+     <strong>
+      CSFS; Leeza is working with Salida Tree Board on grant funding. They have been us- ing Pheromon packets to deter Douglas fir infestation of Spruce Bud Worm on Forest Service lands.
+     </strong>
+    </p>
+    <p>
+     ; Leeza is working with Salida Tree Board on grant funding. They have been us- ing Pheromon packets to deter Douglas fir infestation of Spruce Bud Worm on Forest Service lands.
+    </p>
+    <p>
+     <strong>
+      Business: 1. Planting Guide; Shawn is working on irrigation design and water use. He has prepared soil design schematic. Seed mixes for lawn areas are also recommended Public Works will finalize a draft., by August meeting.
+     </strong>
+    </p>
+    <p>
+     : 1. Planting Guide; Shawn is working on irrigation design and water use. He has prepared soil design schematic. Seed mixes for lawn areas are also recommended Public Works will finalize a draft., by August meeting.
+    </p>
+    <ol>
+     <li>
+      Have three trees to plant. 1 -locust Imperial at Main St &amp; Railroad; 1- Au- tumn Blaze maple at Community Center west drive entry. And 1- Autumn Blaze for Dan Hsu adopt tree at 505 S. Railroad Ave.
+     </li>
+    </ol>
+    <p>
+     Have three trees to plant. 1 -locust Imperial at Main St &amp; Railroad; 1- Au- tumn Blaze maple at Community Center west drive entry. And 1- Autumn Blaze for Dan Hsu adopt tree at 505 S. Railroad Ave.
+    </p>
+    <ol>
+     <li>
+      Town Council presentation moved to late August
+     </li>
+    </ol>
+    <p>
+     Town Council presentation moved to late August
+    </p>
+    <ol>
+     <li>
+      Ash Tree inspection showed no signs of the EAB ( Emerald Ash Borer). Want to use the new inventory to identify Ash trees for next year.OtherBusiness:1. Discussed tree planting at Railroad &amp; Cedar for Dave Bailey. Existing tee is not doing well &amp; either needs replaced or just removed. Parking issues need some resolve.Board members accepted Judith Menzl resignation with a motion by Sarah &amp; 2nd by Dan. Members approved.Mentioned watering issues with trees along S. Railroad needing hand watered. Shawn to check on.Roy &amp; Sarah will prepare an article on tree watering forthe Chaffee County Times.Caleb has the adopt tree placards and will deliver. This
+     </li>
+    </ol>
+    <p>
+     Ash Tree inspection showed no signs of the EAB ( Emerald Ash Borer). Want to use the new inventory to identify Ash trees for next year.
+    </p>
+    <p>
+     <strong>
+      OtherBusiness:1. Discussed tree planting at Railroad &amp; Cedar for Dave Bailey. Existing tee is not doing well &amp; either needs replaced or just removed. Parking issues need some resolve.
+     </strong>
+    </p>
+   </section>
+   <section>
+    <h5 id="1-discussed-tree-planting-at-railroad-cedar-for-da">
+     1. Discussed tree planting at Railroad &amp; Cedar for Dave Bailey. Existing tee is not doing well &amp; either needs replaced or just removed. Parking issues need some resolve.
+    </h5>
+    <ol>
+     <li>
+      Board members accepted Judith Menzl resignation with a motion by Sarah &amp; 2nd by Dan. Members approved.
+     </li>
+    </ol>
+    <p>
+     Board members accepted Judith Menzl resignation with a motion by Sarah &amp; 2nd by Dan. Members approved.
+    </p>
+    <ol>
+     <li>
+      Mentioned watering issues with trees along S. Railroad needing hand watered. Shawn to check on.
+     </li>
+    </ol>
+    <p>
+     Mentioned watering issues with trees along S. Railroad needing hand watered. Shawn to check on.
+    </p>
+    <ol>
+     <li>
+      Roy &amp; Sarah will prepare an article on tree watering forthe Chaffee County Times.
+     </li>
+    </ol>
+    <p>
+     Roy &amp; Sarah will prepare an article on tree watering for
+    </p>
+    <p>
+     the Chaffee County Times.
+    </p>
+    <ol>
+     <li>
+      Caleb has the adopt tree placards and will deliver. This
+     </li>
+    </ol>
+    <p>
+     Caleb has the adopt tree placards and will deliver. This
+    </p>
+    <p>
+     placards identify adopt trees and placed on the deer guards of each tree.
+    </p>
+   </section>
+   <section>
+    <h5 id="nextmeeting-august-7-2025-at-0900-am">
+     NextMeeting;August 7, 2025 at 0900 am
+    </h5>
+    <p>
+     August 7, 2025 at 0900 am
+    </p>
+    <p>
+     Adjourned at 1040 with motion by Roy &amp; 2nd by Sarah , approved by members Respectfully submitted,
+    </p>
+    <p>
+     Roy Gertson Secretary
+    </p>
+   </section>
+   <section>
+    <h2 id="-approvedminutes">
+     ‌ApprovedMinutes
+    </h2>
+   </section>
+   <section>
+    <h2 id="townofbuenavistabeautificationadvisoryboardthursda">
+     TownofBuenaVistaBeautificationAdvisoryBoardThursday,July17,2025
+    </h2>
+    <p>
+     Themeetingwascalledtoorderat5:07pminTownHall,210EastMain,BuenaVista,CO.
+    </p>
+    <p>
+     Present:BoardMembers:JoyDuprey,Chair,DorothyDistel,
+    </p>
+    <p>
+     Present
+    </p>
+   </section>
+   <section>
+    <h4 id="-">
+     :
+    </h4>
+   </section>
+   <section>
+    <h5 id="board">
+     Board
+    </h5>
+   </section>
+   <section>
+    <h5 id="members-">
+     Members:
+    </h5>
+    <p>
+     Joy
+    </p>
+    <p>
+     Duprey,
+    </p>
+    <p>
+     Chair,
+    </p>
+    <p>
+     Dorothy
+    </p>
+    <p>
+     Distel,
+    </p>
+    <p>
+     NancyTaylor,DianaWeir,JenniferWright,JanetPalmentere,SueBenes,JanWheeler-Kitzman,GuestRandyDupreyTownStaff:MaggieHuyck,
+    </p>
+    <p>
+     Nancy
+    </p>
+    <p>
+     Taylor,
+    </p>
+    <p>
+     Diana
+    </p>
+    <p>
+     Weir,
+    </p>
+    <p>
+     Jennifer
+    </p>
+    <p>
+     Wright,
+    </p>
+    <p>
+     Janet
+    </p>
+    <p>
+     Palmentere,
+    </p>
+    <p>
+     Sue
+    </p>
+    <p>
+     Benes,
+    </p>
+    <p>
+     Jan
+    </p>
+    <p>
+     Wheeler-Kitzman,
+    </p>
+    <p>
+     Guest
+    </p>
+    <p>
+     Randy
+    </p>
+    <p>
+     Duprey
+    </p>
+   </section>
+   <section>
+    <h5 id="town">
+     Town
+    </h5>
+   </section>
+   <section>
+    <h5 id="staff-">
+     Staff:
+    </h5>
+    <p>
+     Maggie
+    </p>
+    <p>
+     Huyck,
+    </p>
+    <p>
+     TownTrustee,PaulaBarnett,TownClerk,ShawnWilliams&amp;MichaelKirchhof,BuenaVistaPublicWorks
+    </p>
+   </section>
+   <section>
+    <h5 id="approvalofminutes">
+     ApprovalofMinutes
+    </h5>
+    <ul>
+     <li>
+      EmailapprovedminutesfromtheJune12,2025meetingwereratified
+     </li>
+    </ul>
+    <p>
+     EmailapprovedminutesfromtheJune12,2025meetingwereratified
+    </p>
+   </section>
+   <section>
+    <h2 id="finances">
+     FINANCES
+    </h2>
+   </section>
+   <section>
+    <h5 id="2025beautificationfundingfromtown-19-006">
+     2025BeautificationFundingfromTown-$19,006
+    </h5>
+    <ul>
+     <li>
+      RemainingBalance-$11,886.36RolloverAccount-$2000.25BeautificationFundRaisedFundsAvailableBalance-$5729.10TOWNUPDATESMaggieHuyck,TownTrustee
+     </li>
+    </ul>
+   </section>
+   <section>
+    <h3 id="remainingbalance-11-886-36rolloveraccount-2000-25">
+     RemainingBalance-$11,886.36RolloverAccount-$2000.25
+    </h3>
+   </section>
+   <section>
+    <h5 id="beautificationfundraisedfundsavailablebalance-5729">
+     BeautificationFundRaisedFundsAvailableBalance-$5729.10
+    </h5>
+   </section>
+   <section>
+    <h5 id="available">
+     Available
+    </h5>
+   </section>
+   <section>
+    <h5 id="balance">
+     Balance
+    </h5>
+   </section>
+   <section>
+    <h4 id="townupdates">
+     TOWNUPDATES
+    </h4>
+   </section>
+   <section>
+    <h3 id="own">
+     OWN
+    </h3>
+    <p>
+     UPDATES
+    </p>
+   </section>
+   <section>
+    <h5 id="maggiehuyck-towntrustee">
+     MaggieHuyck,TownTrustee
+    </h5>
+    <ul>
+     <li>
+      CompletedTownCompPlanDraftisstillunderreviewbyPlanning&amp;Zoning.CopiesareavailabletopickuporviewontheTownwebsitePaulaBarnett,TownClerk
+     </li>
+    </ul>
+    <p>
+     CompletedTownCompPlanDraftisstillunderreviewbyPlanning&amp;Zoning.CopiesareavailabletopickuporviewontheTownwebsite
+    </p>
+   </section>
+   <section>
+    <h5 id="paulabarnett-townclerk">
+     PaulaBarnett,TownClerk
+    </h5>
+    <ul>
+     <li>
+      Budgetseasonisapproachingandweshouldplanonreducedfunds
+     </li>
+    </ul>
+    <p>
+     Budgetseasonisapproachingandweshouldplanonreducedfunds
+    </p>
+    <ul>
+     <li>
+      Encouragedalltosignuponthe"MyBV"pageonTownWebsiteShawnWilliams,PublicWorksDirector
+     </li>
+    </ul>
+    <p>
+     Encouragedalltosignuponthe"MyBV"pageonTownWebsite
+    </p>
+   </section>
+   <section>
+    <h5 id="shawnwilliams-publicworksdirector">
+     ShawnWilliams,PublicWorksDirector
+    </h5>
+    <ul>
+     <li>
+      OfferedusleftovergrassesfromtheCordovaParklandscapingforanyofourprojectsMichaelKirchhof,PublicWorks
+     </li>
+    </ul>
+    <p>
+     OfferedusleftovergrassesfromtheCordovaParklandscapingforanyofourprojects
+    </p>
+   </section>
+   <section>
+    <h5 id="michaelkirchhof-publicworks">
+     MichaelKirchhof,PublicWorks
+    </h5>
+    <ul>
+     <li>
+      NewlyopenedCordovaParklandscapingandsignagewaswellreceived
+     </li>
+    </ul>
+    <p>
+     NewlyopenedCordovaParklandscapingandsignagewaswellreceived
+    </p>
+    <ul>
+     <li>
+      DannyisdoingagreatjobtakingcareofflowerplantersonMain
+     </li>
+    </ul>
+    <p>
+     DannyisdoingagreatjobtakingcareofflowerplantersonMain
+    </p>
+    <p>
+     ApprovedMinutesJuly17,2025meetingTownofBVBeautiﬁcationAdvisoryBoard
+    </p>
+    <p>
+     Approved
+    </p>
+   </section>
+  </main>
+  <footer role="contentinfo">
+   <div class="footer-content">
+    <p>
+     Document transformed for accessibility compliance
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>
